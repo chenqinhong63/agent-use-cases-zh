@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 用例库 · 中文版 — 别人用 AI Agent 真干成了什么</title>
+<meta name="description" content="agentusecases.ai 的中文版：2263 条真实 AI Agent 用例，按分类和 Agent 筛选，每条带可复制的中文提示词。">
+<style>
+  :root { --bg:#f7f7f5; --card:#fff; --text:#1a1a1a; --muted:#666; --line:#e3e3e0; --accent:#2563eb; --chip:#eee; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  header { background:#111; color:#fff; padding:28px 16px 24px; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 16px; }
+  header h1 { margin:0; font-size:26px; line-height:1.3; }
+  header p { margin:8px 0 0; color:#bbb; font-size:14px; }
+  .stats { display:flex; gap:16px; flex-wrap:wrap; margin-top:14px; font-size:14px; }
+  .stats b { color:#fff; font-size:18px; margin-right:2px; }
+  .toolbar { position:sticky; top:0; background:var(--bg); padding:14px 0 8px; z-index:5; }
+  input[type=search] { width:100%; padding:11px 14px; font-size:16px; border:1px solid var(--line); border-radius:10px; background:#fff; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+  .chip { border:1px solid var(--line); background:var(--chip); border-radius:999px; padding:5px 12px; font-size:13px; cursor:pointer; }
+  .chip.active { background:#111; color:#fff; border-color:#111; }
+  .row { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; align-items:center; }
+  select { padding:9px 10px; font-size:14px; border:1px solid var(--line); border-radius:8px; background:#fff; max-width:100%; }
+  button { cursor:pointer; }
+  .btn { border:1px solid #111; background:#111; color:#fff; border-radius:8px; padding:9px 14px; font-size:14px; }
+  .btn.ghost { background:#fff; color:#111; border-color:var(--line); }
+  .count { color:var(--muted); font-size:13px; }
+  .list { display:grid; gap:12px; padding-bottom:8px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; cursor:pointer; }
+  .card h2 { margin:0 0 6px; font-size:17px; line-height:1.4; }
+  .meta { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
+  .tag { font-size:12px; background:#eef2ff; color:#3730a3; border-radius:999px; padding:2px 9px; }
+  .tag.cat { background:#ecfdf5; color:#065f46; }
+  .tag.pending { background:#fef3c7; color:#92400e; }
+  .card p { margin:0; color:#444; font-size:14px; }
+  .detail { display:none; margin-top:12px; border-top:1px dashed var(--line); padding-top:12px; }
+  .card.open .detail { display:block; }
+  .detail h3 { margin:10px 0 6px; font-size:14px; }
+  .prompt { background:#f7f7f5; border:1px solid var(--line); border-radius:8px; padding:10px 12px; font-size:14px; white-space:pre-wrap; }
+  .note { font-size:12px; color:var(--muted); }
+  .detail .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; align-items:center; }
+  .copy { border:1px solid var(--accent); background:var(--accent); color:#fff; border-radius:8px; padding:7px 12px; font-size:13px; }
+  .copy:disabled { opacity:.5; cursor:not-allowed; }
+  .link { color:var(--accent); font-size:13px; text-decoration:none; }
+  .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:#111; color:#fff; padding:9px 16px; border-radius:999px; font-size:13px; display:none; z-index:10; }
+  .pager { display:flex; gap:10px; align-items:center; justify-content:center; padding:18px 0 8px; flex-wrap:wrap; }
+  .pager button { border:1px solid var(--line); background:#fff; border-radius:8px; padding:8px 14px; font-size:14px; }
+  .pager button:disabled { opacity:.45; cursor:not-allowed; }
+  .empty { text-align:center; color:var(--muted); padding:40px 0; }
+  footer { border-top:1px solid var(--line); margin-top:24px; padding:20px 16px 32px; color:var(--muted); font-size:13px; }
+  footer a { color:var(--accent); }
+  .loading { padding:40px 0; text-align:center; color:var(--muted); }
+  @media (max-width:600px){ header h1{font-size:21px;} .card h2{font-size:16px;} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Agent 用例库 · 中文版</h1>
+    <p>别人用 AI Agent 真干成了什么 — agentusecases.ai 的中文整理，点开一条就能直接抄提示词试试。</p>
+    <div class="stats" id="stats"><span>加载中…</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="搜索：标题、简介或 Agent，如 报税 / Claude Code / 旅行…" aria-label="搜索案例">
+    <div class="chips" id="chips"></div>
+    <div class="row">
+      <select id="agent" aria-label="按 Agent 筛选"><option value="">全部 Agent</option></select>
+      <button class="btn ghost" id="random" type="button">🎲 随机来一条</button>
+      <button class="btn ghost" id="clear" type="button">清除筛选</button>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+
+  <div id="list" class="list"><div class="loading">正在加载 2263 条案例…</div></div>
+  <div class="pager" id="pager"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>数据来源：<a href="https://agentusecases.ai/" target="_blank" rel="noopener">agentusecases.ai</a>（Alex Finn），原站每日更新，本站每天自动同步新增案例。标题与简介为中文翻译；提示词为按案例改写的中文提示词模板，不是原站提示词原文。</p>
+    <p>案例是网友分享的整理，未经逐条独立实测验证；部分案例为美国场景（如报税、Comcast、AT&T），照抄前请先点“看原站详情”确认原文。数据截至抓取时共 2263 条，之后的新增以每日更新为准。</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">已复制提示词</div>
+
+<script>
+const PAGE_SIZE = 24;
+const CATEGORIES = ["软件与运维","运营与效率","生活与家庭","增长与营销","金钱账单与权益","研究与分析","购物与比价","创意与内容","出行与旅行","游戏","科学"];
+let all = [], filtered = [], page = 1, openSlug = null;
+let curCat = "", curAgent = "", curQ = "";
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function isTranslated(c){ return c.translated !== false; }
+
+function renderStats(){
+  const agents = new Set();
+  all.forEach(c => (c.agents||[]).forEach(a => agents.add(a)));
+  const cats = new Set(all.map(c => c.category_zh));
+  $("#stats").innerHTML =
+    `<span><b>${all.length}</b> 条案例</span><span><b>${cats.size}</b> 个分类</span><span><b>${agents.size}</b> 个 Agent</span>`;
+}
+
+function renderChips(){
+  $("#chips").innerHTML = `<button type="button" class="chip${curCat===""?" active":""}" data-cat="">全部</button>` +
+    CATEGORIES.map(c => `<button type="button" class="chip${curCat===c?" active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+  document.querySelectorAll("#chips .chip").forEach(b => b.addEventListener("click", () => { curCat = b.dataset.cat; page = 1; apply(); }));
+}
+
+function renderAgentOptions(){
+  const counts = {};
+  all.forEach(c => (c.agents||[]).forEach(a => counts[a] = (counts[a]||0) + 1));
+  const sel = $("#agent");
+  const cur = sel.value;
+  sel.innerHTML = `<option value="">全部 Agent</option>` +
+    Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([a,n]) => `<option value="${esc(a)}">${esc(a)}（${n}）</option>`).join("");
+  sel.value = cur;
+}
+
+function apply(){
+  const q = curQ.trim().toLowerCase();
+  filtered = all.filter(c => {
+    if (curCat && c.category_zh !== curCat) return false;
+    if (curAgent && !(c.agents||[]).includes(curAgent)) return false;
+    if (q) {
+      const hay = [c.title_zh, c.summary_zh, (c.agents||[]).join(" ")].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  if (page > totalPages) page = totalPages;
+  renderList(totalPages);
+}
+
+function renderList(totalPages){
+  $("#count").textContent = `共 ${filtered.length} 条 · 第 ${page}/${totalPages} 页`;
+  renderChips();
+  const start = (page-1)*PAGE_SIZE;
+  const items = filtered.slice(start, start+PAGE_SIZE);
+  const list = $("#list");
+  if (!items.length) {
+    list.innerHTML = `<div class="empty">没有符合条件的案例，换个关键词或清除筛选试试。</div>`;
+  } else {
+    list.innerHTML = items.map(c => {
+      const pending = !isTranslated(c);
+      return `<article class="card${openSlug===c.slug?" open":""}" data-slug="${esc(c.slug)}" tabindex="0">
+        <h2>${esc(c.title_zh)}</h2>
+        <div class="meta">
+          <span class="tag cat">${esc(c.category_zh || "未分类")}</span>
+          ${(c.agents||[]).map(a=>`<span class="tag">${esc(a)}</span>`).join("")}
+          ${pending?`<span class="tag pending">待翻译</span>`:""}
+          ${c.accounts?`<span class="tag">${esc(c.accounts)} 个来源分享</span>`:""}
+        </div>
+        <p>${esc(c.summary_zh || "")}</p>
+        <div class="detail">
+          <h3>简介</h3>
+          <p>${esc(c.summary_zh || "暂无简介")}</p>
+          <h3>提示词 ${pending?"（待翻译）":"（改写版提示词，可直接复制改着用）"}</h3>
+          ${c.prompt_zh ? `<div class="prompt">${esc(c.prompt_zh)}</div>` : `<p class="note">暂无中文提示词，等翻译更新后补上。</p>`}
+          <div class="actions">
+            <button type="button" class="copy" data-copy="${esc(c.slug)}" ${c.prompt_zh?"":"disabled"}>复制提示词</button>
+            <a class="link" href="${esc(c.url)}" target="_blank" rel="noopener">看原站详情 ↗</a>
+            <span class="note">来源：agentusecases.ai</span>
+          </div>
+        </div>
+      </article>`;
+    }).join("");
+    list.querySelectorAll(".card").forEach(card => {
+      const toggle = e => { if (e.target.closest(".copy, a")) return; openSlug = openSlug===card.dataset.slug ? null : card.dataset.slug; renderList(totalPages); if (openSlug) card.scrollIntoView({block:"nearest"}); };
+      card.addEventListener("click", toggle);
+      card.addEventListener("keydown", e => { if (e.key==="Enter") toggle(e); });
+    });
+    list.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", async e => {
+      e.stopPropagation();
+      const c = all.find(x => x.slug === btn.dataset.copy);
+      if (!c || !c.prompt_zh) return;
+      try { await navigator.clipboard.writeText(c.prompt_zh); }
+      catch(_) {
+        const ta = document.createElement("textarea");
+        ta.value = c.prompt_zh; document.body.appendChild(ta); ta.select();
+        document.execCommand("copy"); ta.remove();
+      }
+      const t = $("#toast"); t.style.display = "block";
+      setTimeout(()=> t.style.display = "none", 1500);
+    }));
+  }
+  const pager = $("#pager");
+  pager.innerHTML = totalPages > 1
+    ? `<button type="button" id="prev" ${page<=1?"disabled":""}>← 上一页</button><span class="count">第 ${page} / ${totalPages} 页</span><button type="button" id="next" ${page>=totalPages?"disabled":""}>下一页 →</button>`
+    : "";
+  const prev = $("#prev"), next = $("#next");
+  if (prev) prev.addEventListener("click", ()=>{ page--; renderList(totalPages); window.scrollTo({top:0, behavior:"smooth"}); });
+  if (next) next.addEventListener("click", ()=>{ page++; renderList(totalPages); window.scrollTo({top:0, behavior:"smooth"}); });
+}
+
+async function init(){
+  try {
+    const res = await fetch("data/cases.json");
+    all = await res.json();
+  } catch(e) {
+    $("#list").innerHTML = `<div class="empty">数据加载失败：请用本地服务器打开（python -m http.server），不要直接双击文件打开。</div>`;
+    return;
+  }
+  renderStats(); renderAgentOptions(); renderChips(); apply();
+  let deb;
+  $("#q").addEventListener("input", e => { clearTimeout(deb); deb = setTimeout(()=>{ curQ = e.target.value; page = 1; apply(); }, 200); });
+  $("#agent").addEventListener("change", e => { curAgent = e.target.value; page = 1; apply(); });
+  $("#clear").addEventListener("click", () => { curCat=""; curAgent=""; curQ=""; $("#q").value=""; $("#agent").value=""; page=1; apply(); });
+  $("#random").addEventListener("click", () => {
+    if (!filtered.length) return;
+    const c = filtered[Math.floor(Math.random()*filtered.length)];
+    page = Math.floor(filtered.indexOf(c)/PAGE_SIZE)+1;
+    openSlug = c.slug;
+    renderList(Math.max(1, Math.ceil(filtered.length/PAGE_SIZE)));
+    const el = document.querySelector(`[data-slug="${CSS.escape(c.slug)}"]`);
+    if (el) el.scrollIntoView({block:"center", behavior:"smooth"});
+  });
+}
+init();
+</script>
+</body>
+</html>

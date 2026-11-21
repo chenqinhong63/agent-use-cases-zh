@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agent 用例库 · 中文版 — 别人用 AI Agent 真干成了什么</title>
-<meta name="description" content="2267 条真实 AI Agent 用例：2263 条翻译案例、4 条小红书案例，按分类和 Agent 筛选，每条带可复制的中文提示词和原文链接。">
+<meta name="description" content="2275 条真实 AI Agent 用例：2263 条翻译案例、12 条中文实测案例，按分类和 Agent 筛选，每条带可复制的中文提示词和原文链接。">
 <style>
   :root { --bg:#f7f7f5; --card:#fff; --text:#1a1a1a; --muted:#666; --line:#e3e3e0; --accent:#2563eb; --chip:#eee; }
   * { box-sizing:border-box; }
@@ -34,6 +34,9 @@
   .tag.cat { background:#ecfdf5; color:#065f46; }
   .tag.pending { background:#fef3c7; color:#92400e; }
   .tag.xhs { background:#ffe4e6; color:#be123c; }
+  .tag.douyin { background:#111; color:#fff; }
+  .tag.bili { background:#e3f2fd; color:#00a1d6; }
+  .tag.weibo { background:#fee2e2; color:#b91c1c; }
   a.tag { text-decoration:none; }
   a.tag:hover { text-decoration:underline; }
   a.btn { text-decoration:none; display:inline-block; }
@@ -88,14 +91,18 @@
 const PAGE_SIZE = 24;
 const CATEGORIES = ["软件与运维","运营与效率","生活与家庭","增长与营销","金钱账单与权益","研究与分析","购物与比价","创意与内容","出行与旅行","游戏","科学"];
 let all = [], filtered = [], page = 1, openSlug = null;
-let curCat = "", curAgent = "", curQ = "", curXhs = false;
+let curCat = "", curAgent = "", curQ = "", curCn = false;
 let agentLinks = {};
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
+const CN_ORIGINS = {"小红书收集":"小红书","抖音":"抖音","B站":"B站","微博":"微博"};
+const CN_CLASSES = {"小红书收集":"xhs","抖音":"douyin","B站":"bili","微博":"weibo"};
 function isTranslated(c){ return c.translated !== false; }
-function isXhs(c){ return c.origin === "小红书收集"; }
+function isChinese(c){ return Object.prototype.hasOwnProperty.call(CN_ORIGINS, c.origin); }
+function platformLabel(c){ return CN_ORIGINS[c.origin] || ""; }
+function platformClass(c){ return CN_CLASSES[c.origin] || ""; }
 function agentTag(a){
   const u = agentLinks[a];
   return u ? `<a class="tag" href="${esc(u)}" target="_blank" rel="noopener">${esc(a)} ↗</a>`
@@ -106,18 +113,18 @@ function renderStats(){
   const agents = new Set();
   all.forEach(c => (c.agents||[]).forEach(a => agents.add(a)));
   const cats = new Set(all.map(c => c.category_zh));
-  const xhs = all.filter(isXhs).length;
+  const xhs = all.filter(isChinese).length;
   $("#stats").innerHTML =
-    `<span><b>${all.length}</b> 条案例</span><span><b>${cats.size}</b> 个分类</span><span><b>${agents.size}</b> 个 Agent</span><span><b>${xhs}</b> 条小红书</span>`;
+    `<span><b>${all.length}</b> 条案例</span><span><b>${cats.size}</b> 个分类</span><span><b>${agents.size}</b> 个 Agent</span><span><b>${xhs}</b> 条中文实测</span>`;
 }
 
 function renderChips(){
-  $("#chips").innerHTML = `<button type="button" class="chip${!curXhs && curCat===""?" active":""}" data-cat="">全部</button>` +
-    `<button type="button" class="chip${curXhs?" active":""}" data-xhs="1">小红书</button>` +
-    CATEGORIES.map(c => `<button type="button" class="chip${!curXhs && curCat===c?" active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+  $("#chips").innerHTML = `<button type="button" class="chip${!curCn && curCat===""?" active":""}" data-cat="">全部</button>` +
+    `<button type="button" class="chip${curCn?" active":""}" data-cn="1">中文实测</button>` +
+    CATEGORIES.map(c => `<button type="button" class="chip${!curCn && curCat===c?" active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
   document.querySelectorAll("#chips .chip").forEach(b => b.addEventListener("click", () => {
-    if (b.dataset.xhs) { curXhs = true; curCat = ""; }
-    else { curXhs = false; curCat = b.dataset.cat; }
+    if (b.dataset.cn) { curCn = true; curCat = ""; }
+    else { curCn = false; curCat = b.dataset.cat; }
     page = 1; apply();
   }));
 }
@@ -135,7 +142,7 @@ function renderAgentOptions(){
 function apply(){
   const q = curQ.trim().toLowerCase();
   filtered = all.filter(c => {
-    if (curXhs && !isXhs(c)) return false;
+    if (curCn && !isChinese(c)) return false;
     if (curCat && c.category_zh !== curCat) return false;
     if (curAgent && !(c.agents||[]).includes(curAgent)) return false;
     if (q) {
@@ -165,14 +172,14 @@ function renderList(totalPages){
         <div class="meta">
           <span class="tag cat">${esc(c.category_zh || "未分类")}</span>
           ${(c.agents||[]).map(agentTag).join("")}
-          ${isXhs(c)?`<span class="tag xhs">小红书</span>`:""}
+          ${isChinese(c)?`<span class="tag ${platformClass(c)}">${esc(platformLabel(c))}</span>`:""}
           ${pending?`<span class="tag pending">待翻译</span>`:""}
         </div>
         <p>${esc(c.summary_zh || "")}</p>
         <div class="detail">
           <h3>简介</h3>
           <p>${esc(c.summary_zh || "暂无简介")}</p>
-          ${isXhs(c)?`<p class="note">小红书收集 · 作者：${esc(c.author || "匿名")}</p>`:""}
+          ${isChinese(c)?`<p class="note">${esc(platformLabel(c))} · 作者：${esc(c.author || "匿名")}</p>`:""}
           <h3>提示词${pending?"（待翻译）":""}</h3>
           ${c.prompt_zh ? `<div class="prompt">${esc(c.prompt_zh)}</div>` : `<p class="note">暂无中文提示词，等翻译更新后补上。</p>`}
           <div class="actions">
@@ -214,16 +221,20 @@ async function init(){
   try {
     const res = await fetch("data/cases.json");
     const cases = await res.json();
-    let xhs = [];
+    let xhs = [], chinese = [];
     try {
       const res3 = await fetch("data/cases-xiaohongshu.json");
       if (res3.ok) xhs = await res3.json();
     } catch(_) { /* 小红书数据缺失时不影响其余案例 */ }
     try {
+      const res5 = await fetch("data/cases-chinese.json");
+      if (res5.ok) chinese = await res5.json();
+    } catch(_) { /* 中文实测数据缺失时不影响其余案例 */ }
+    try {
       const res4 = await fetch("data/agent-links.json");
       if (res4.ok) agentLinks = await res4.json();
     } catch(_) { /* 官网链接缺失时 Agent 标签降级为纯文字 */ }
-    all = [...xhs, ...cases];
+    all = [...xhs, ...chinese, ...cases];
   } catch(e) {
     $("#list").innerHTML = `<div class="empty">数据加载失败：请用本地服务器打开（python -m http.server），不要直接双击文件打开。</div>`;
     return;
@@ -232,7 +243,7 @@ async function init(){
   let deb;
   $("#q").addEventListener("input", e => { clearTimeout(deb); deb = setTimeout(()=>{ curQ = e.target.value; page = 1; apply(); }, 200); });
   $("#agent").addEventListener("change", e => { curAgent = e.target.value; page = 1; apply(); });
-  $("#clear").addEventListener("click", () => { curCat=""; curAgent=""; curQ=""; curXhs=false; $("#q").value=""; $("#agent").value=""; page=1; apply(); });
+  $("#clear").addEventListener("click", () => { curCat=""; curAgent=""; curQ=""; curCn=false; $("#q").value=""; $("#agent").value=""; page=1; apply(); });
   $("#random").addEventListener("click", () => {
     if (!filtered.length) return;
     const c = filtered[Math.floor(Math.random()*filtered.length)];

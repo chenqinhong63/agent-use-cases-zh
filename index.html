@@ -35,6 +35,7 @@
   .tag.douyin { background:#111; color:#fff; }
   .tag.bili { background:#e3f2fd; color:#00a1d6; }
   .tag.weibo { background:#fee2e2; color:#b91c1c; }
+  .tag.src { background:#f0f0f0; color:#555; }
   a.tag { text-decoration:none; }
   a.tag:hover { text-decoration:underline; }
   a.btn { text-decoration:none; display:inline-block; }
@@ -88,7 +89,7 @@
 const PAGE_SIZE = 24;
 const CATEGORIES = ["软件与运维","运营与效率","生活与家庭","增长与营销","金钱账单与权益","研究与分析","购物与比价","创意与内容","出行与旅行","游戏","科学"];
 let all = [], filtered = [], page = 1, openSlug = null;
-let curCat = "", curAgent = "", curQ = "", curCn = false;
+let curCat = "", curAgent = "", curQ = "", curCn = false, curBulk = false;
 let agentLinks = {};
 
 const $ = s => document.querySelector(s);
@@ -97,9 +98,10 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const CN_ORIGINS = {"小红书收集":"小红书","抖音":"抖音","B站":"B站","微博":"微博"};
 const CN_CLASSES = {"小红书收集":"xhs","抖音":"douyin","B站":"bili","微博":"weibo"};
 function isTranslated(c){ return c.translated !== false; }
-function isChinese(c){ return Object.prototype.hasOwnProperty.call(CN_ORIGINS, c.origin); }
-function platformLabel(c){ return CN_ORIGINS[c.origin] || ""; }
-function platformClass(c){ return CN_CLASSES[c.origin] || ""; }
+function isBulk(c){ return !!c._bulk; }
+function isChinese(c){ return !c._bulk && Object.prototype.hasOwnProperty.call(CN_ORIGINS, c.origin); }
+function platformLabel(c){ return isBulk(c) ? (c.origin || "") : (CN_ORIGINS[c.origin] || ""); }
+function platformClass(c){ return CN_CLASSES[c.origin] || "src"; }
 function agentTag(a){
   const u = agentLinks[a];
   return u ? `<a class="tag" href="${esc(u)}" target="_blank" rel="noopener">${esc(a)} ↗</a>`
@@ -107,12 +109,14 @@ function agentTag(a){
 }
 
 function renderChips(){
-  $("#chips").innerHTML = `<button type="button" class="chip${!curCn && curCat===""?" active":""}" data-cat="">全部</button>` +
+  $("#chips").innerHTML = `<button type="button" class="chip${!curCn && !curBulk && curCat===""?" active":""}" data-cat="">全部</button>` +
     `<button type="button" class="chip${curCn?" active":""}" data-cn="1">中文实测</button>` +
-    CATEGORIES.map(c => `<button type="button" class="chip${!curCn && curCat===c?" active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+    `<button type="button" class="chip${curBulk?" active":""}" data-bulk="1">中文案例</button>` +
+    CATEGORIES.map(c => `<button type="button" class="chip${!curCn && !curBulk && curCat===c?" active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
   document.querySelectorAll("#chips .chip").forEach(b => b.addEventListener("click", () => {
-    if (b.dataset.cn) { curCn = true; curCat = ""; }
-    else { curCn = false; curCat = b.dataset.cat; }
+    if (b.dataset.cn) { curCn = true; curBulk = false; curCat = ""; }
+    else if (b.dataset.bulk) { curBulk = true; curCn = false; curCat = ""; }
+    else { curCn = false; curBulk = false; curCat = b.dataset.cat; }
     page = 1; apply();
   }));
 }
@@ -131,6 +135,7 @@ function apply(){
   const q = curQ.trim().toLowerCase();
   filtered = all.filter(c => {
     if (curCn && !isChinese(c)) return false;
+    if (curBulk && !isBulk(c)) return false;
     if (curCat && c.category_zh !== curCat) return false;
     if (curAgent && !(c.agents||[]).includes(curAgent)) return false;
     if (q) {
@@ -160,14 +165,14 @@ function renderList(totalPages){
         <div class="meta">
           <span class="tag cat">${esc(c.category_zh || "未分类")}</span>
           ${(c.agents||[]).map(agentTag).join("")}
-          ${isChinese(c)?`<span class="tag ${platformClass(c)}">${esc(platformLabel(c))}</span>`:""}
+          ${(isChinese(c)||isBulk(c))?`<span class="tag ${platformClass(c)}">${esc(platformLabel(c))}</span>`:""}
           ${pending?`<span class="tag pending">待翻译</span>`:""}
         </div>
         <p>${esc(c.summary_zh || "")}</p>
         <div class="detail">
           <h3>简介</h3>
           <p>${esc(c.summary_zh || "暂无简介")}</p>
-          ${isChinese(c)?`<p class="note">${esc(platformLabel(c))} · 作者：${esc(c.author || "匿名")}</p>`:""}
+          ${(isChinese(c)||isBulk(c))?`<p class="note">${esc(platformLabel(c))} · 作者：${esc(c.author || "匿名")}</p>`:""}
           <h3>提示词${pending?"（待翻译）":""}</h3>
           ${c.prompt_zh ? `<div class="prompt">${esc(c.prompt_zh)}</div>` : `<p class="note">暂无中文提示词，等翻译更新后补上。</p>`}
           <div class="actions">
@@ -209,7 +214,7 @@ async function init(){
   try {
     const res = await fetch("data/cases.json");
     const cases = await res.json();
-    let xhs = [], chinese = [];
+    let xhs = [], chinese = [], bulk = [];
     try {
       const res3 = await fetch("data/cases-xiaohongshu.json");
       if (res3.ok) xhs = await res3.json();
@@ -219,10 +224,14 @@ async function init(){
       if (res5.ok) chinese = await res5.json();
     } catch(_) { /* 中文实测数据缺失时不影响其余案例 */ }
     try {
+      const res6 = await fetch("data/cases-bulk.json");
+      if (res6.ok) { bulk = await res6.json(); bulk.forEach(c => c._bulk = true); }
+    } catch(_) { /* 批量中文数据缺失时不影响其余案例 */ }
+    try {
       const res4 = await fetch("data/agent-links.json");
       if (res4.ok) agentLinks = await res4.json();
     } catch(_) { /* 官网链接缺失时 Agent 标签降级为纯文字 */ }
-    all = [...xhs, ...chinese, ...cases];
+    all = [...xhs, ...chinese, ...bulk, ...cases];
   } catch(e) {
     $("#list").innerHTML = `<div class="empty">数据加载失败：请用本地服务器打开（python -m http.server），不要直接双击文件打开。</div>`;
     return;
@@ -231,7 +240,7 @@ async function init(){
   let deb;
   $("#q").addEventListener("input", e => { clearTimeout(deb); deb = setTimeout(()=>{ curQ = e.target.value; page = 1; apply(); }, 200); });
   $("#agent").addEventListener("change", e => { curAgent = e.target.value; page = 1; apply(); });
-  $("#clear").addEventListener("click", () => { curCat=""; curAgent=""; curQ=""; curCn=false; $("#q").value=""; $("#agent").value=""; page=1; apply(); });
+  $("#clear").addEventListener("click", () => { curCat=""; curAgent=""; curQ=""; curCn=false; curBulk=false; $("#q").value=""; $("#agent").value=""; page=1; apply(); });
   $("#random").addEventListener("click", () => {
     if (!filtered.length) return;
     const c = filtered[Math.floor(Math.random()*filtered.length)];

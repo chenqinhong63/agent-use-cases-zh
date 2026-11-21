@@ -38,5 +38,12 @@
   "Whisper": "https://openai.com/index/whisper/",
   "WorkBuddy": "https://www.workbuddy.cn",
   "dsh-graph": null,
-  "豆包": "https://www.doubao.com"
+  "豆包": "https://www.doubao.com",
+  "AutoGLM": "https://github.com/THUDM/AutoGLM",
+  "Coze": "https://www.coze.cn/",
+  "Dify": "https://dify.ai",
+  "Eino": "https://www.cloudwego.io/docs/eino/",
+  "Grok": "https://grok.com",
+  "LangGraph": "https://www.langchain.com/langgraph",
+  "Trae": "https://www.trae.cn/"
 }

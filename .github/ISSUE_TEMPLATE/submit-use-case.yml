@@ -1,0 +1,58 @@
+name: 投稿中文原创案例
+description: 分享你真实用 AI Agent 做成的事，审核通过后上站并署名
+title: "[投稿] "
+labels: ["投稿"]
+body:
+  - type: markdown
+    attributes:
+      value: "只收真实做过的事，不收编造和搬运。审核通过后上站、署你的名。"
+  - type: input
+    id: title
+    attributes:
+      label: 标题
+      description: 一句话说清 Agent 帮你做了什么
+      placeholder: 例：用 Claude Code 一天搭了个记账小程序
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: 用的 Agent
+      description: 如 Claude Code、ChatGPT、Manus、自建 Agent 等
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 你让 Agent 做了什么
+      description: 具体任务、输入了什么、Agent 是怎么做的
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 结果如何
+      description: 有数字写数字（省了多久、花了多少、做成了什么），没数字就写实话，不要编
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: 提示词
+      description: 可直接复制的提示词，敏感信息用 [ ] 占位符代替
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: 可验证的链接或截图说明（选填）
+      description: 原帖链接、截图说明等，能证明这事真的做过
+    validations:
+      required: false
+  - type: input
+    id: author
+    attributes:
+      label: 你的称呼 / 联系方式（选填）
+      description: 上站时署这个名，留空则匿名
+    validations:
+      required: false

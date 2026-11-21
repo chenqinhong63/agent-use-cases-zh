@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agent 用例库 · 中文版 — 别人用 AI Agent 真干成了什么</title>
-<meta name="description" content="2275 条真实 AI Agent 用例：2263 条翻译案例、12 条中文实测案例，按分类和 Agent 筛选，每条带可复制的中文提示词和原文链接。">
+<meta name="description" content="真实 AI Agent 用例：翻译案例与中文实测案例，按分类和 Agent 筛选，每条带可复制的中文提示词和原文链接。">
 <style>
   :root { --bg:#f7f7f5; --card:#fff; --text:#1a1a1a; --muted:#666; --line:#e3e3e0; --accent:#2563eb; --chip:#eee; }
   * { box-sizing:border-box; }
@@ -13,8 +13,6 @@
   .wrap { max-width:960px; margin:0 auto; padding:0 16px; }
   header h1 { margin:0; font-size:26px; line-height:1.3; }
   header p { margin:8px 0 0; color:#bbb; font-size:14px; }
-  .stats { display:flex; gap:16px; flex-wrap:wrap; margin-top:14px; font-size:14px; }
-  .stats b { color:#fff; font-size:18px; margin-right:2px; }
   .toolbar { position:sticky; top:0; background:var(--bg); padding:14px 0 8px; z-index:5; }
   input[type=search] { width:100%; padding:11px 14px; font-size:16px; border:1px solid var(--line); border-radius:10px; background:#fff; }
   .chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
@@ -64,7 +62,6 @@
   <div class="wrap">
     <h1>Agent 用例库 · 中文版</h1>
     <p>别人用 AI Agent 真干成了什么，点开一条就能直接抄提示词试试。</p>
-    <div class="stats" id="stats"><span>加载中…</span></div>
   </div>
 </header>
 
@@ -107,15 +104,6 @@ function agentTag(a){
   const u = agentLinks[a];
   return u ? `<a class="tag" href="${esc(u)}" target="_blank" rel="noopener">${esc(a)} ↗</a>`
            : `<span class="tag">${esc(a)}</span>`;
-}
-
-function renderStats(){
-  const agents = new Set();
-  all.forEach(c => (c.agents||[]).forEach(a => agents.add(a)));
-  const cats = new Set(all.map(c => c.category_zh));
-  const xhs = all.filter(isChinese).length;
-  $("#stats").innerHTML =
-    `<span><b>${all.length}</b> 条案例</span><span><b>${cats.size}</b> 个分类</span><span><b>${agents.size}</b> 个 Agent</span><span><b>${xhs}</b> 条中文实测</span>`;
 }
 
 function renderChips(){
@@ -239,7 +227,7 @@ async function init(){
     $("#list").innerHTML = `<div class="empty">数据加载失败：请用本地服务器打开（python -m http.server），不要直接双击文件打开。</div>`;
     return;
   }
-  renderStats(); renderAgentOptions(); renderChips(); apply();
+  renderAgentOptions(); renderChips(); apply();
   let deb;
   $("#q").addEventListener("input", e => { clearTimeout(deb); deb = setTimeout(()=>{ curQ = e.target.value; page = 1; apply(); }, 200); });
   $("#agent").addEventListener("change", e => { curAgent = e.target.value; page = 1; apply(); });

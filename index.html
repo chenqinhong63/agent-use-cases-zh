@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agent 用例库 · 中文版 — 别人用 AI Agent 真干成了什么</title>
-<meta name="description" content="agentusecases.ai 的中文版：2263 条真实 AI Agent 用例，按分类和 Agent 筛选，每条带可复制的中文提示词。">
+<meta name="description" content="2263 条真实 AI Agent 用例，按分类和 Agent 筛选，每条带可复制的中文提示词。">
 <style>
   :root { --bg:#f7f7f5; --card:#fff; --text:#1a1a1a; --muted:#666; --line:#e3e3e0; --accent:#2563eb; --chip:#eee; }
   * { box-sizing:border-box; }
@@ -48,8 +48,6 @@
   .pager button { border:1px solid var(--line); background:#fff; border-radius:8px; padding:8px 14px; font-size:14px; }
   .pager button:disabled { opacity:.45; cursor:not-allowed; }
   .empty { text-align:center; color:var(--muted); padding:40px 0; }
-  footer { border-top:1px solid var(--line); margin-top:24px; padding:20px 16px 32px; color:var(--muted); font-size:13px; }
-  footer a { color:var(--accent); }
   .loading { padding:40px 0; text-align:center; color:var(--muted); }
   @media (max-width:600px){ header h1{font-size:21px;} .card h2{font-size:16px;} }
 </style>
@@ -58,7 +56,7 @@
 <header>
   <div class="wrap">
     <h1>Agent 用例库 · 中文版</h1>
-    <p>别人用 AI Agent 真干成了什么 — agentusecases.ai 的中文整理，点开一条就能直接抄提示词试试。</p>
+    <p>别人用 AI Agent 真干成了什么，点开一条就能直接抄提示词试试。</p>
     <div class="stats" id="stats"><span>加载中…</span></div>
   </div>
 </header>
@@ -78,13 +76,6 @@
   <div id="list" class="list"><div class="loading">正在加载 2263 条案例…</div></div>
   <div class="pager" id="pager"></div>
 </main>
-
-<footer>
-  <div class="wrap">
-    <p>数据来源：<a href="https://agentusecases.ai/" target="_blank" rel="noopener">agentusecases.ai</a>（Alex Finn），原站每日更新，本站每天自动同步新增案例。标题与简介为中文翻译；提示词为按案例改写的中文提示词模板，不是原站提示词原文。</p>
-    <p>案例是网友分享的整理，未经逐条独立实测验证；部分案例为美国场景（如报税、Comcast、AT&T），照抄前请先点“看原站详情”确认原文。数据截至抓取时共 2263 条，之后的新增以每日更新为准。</p>
-  </div>
-</footer>
 
 <div class="toast" id="toast">已复制提示词</div>
 
@@ -156,18 +147,15 @@ function renderList(totalPages){
           <span class="tag cat">${esc(c.category_zh || "未分类")}</span>
           ${(c.agents||[]).map(a=>`<span class="tag">${esc(a)}</span>`).join("")}
           ${pending?`<span class="tag pending">待翻译</span>`:""}
-          ${c.accounts?`<span class="tag">${esc(c.accounts)} 个来源分享</span>`:""}
         </div>
         <p>${esc(c.summary_zh || "")}</p>
         <div class="detail">
           <h3>简介</h3>
           <p>${esc(c.summary_zh || "暂无简介")}</p>
-          <h3>提示词 ${pending?"（待翻译）":"（改写版提示词，可直接复制改着用）"}</h3>
+          <h3>提示词${pending?"（待翻译）":""}</h3>
           ${c.prompt_zh ? `<div class="prompt">${esc(c.prompt_zh)}</div>` : `<p class="note">暂无中文提示词，等翻译更新后补上。</p>`}
           <div class="actions">
             <button type="button" class="copy" data-copy="${esc(c.slug)}" ${c.prompt_zh?"":"disabled"}>复制提示词</button>
-            <a class="link" href="${esc(c.url)}" target="_blank" rel="noopener">看原站详情 ↗</a>
-            <span class="note">来源：agentusecases.ai</span>
           </div>
         </div>
       </article>`;

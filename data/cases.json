@@ -27393,5 +27393,302 @@
   "summary_zh": "MARS 是一款通用机器人，带基于 ROS2 的开放式板载 Agent 操作系统，成本在 2000 美元以下。",
   "title_zh": "做一个 2000 美元以下的个人机器人",
   "url": "https://agentusecases.ai/use-case/program-a-sub-2k-personal-robot"
+ },
+ {
+  "slug": "add-docs-metadata-fixes-and-validation-to-a-github-action-re",
+  "title_zh": "Add docs, metadata fixes and validation to a GitHub Action repo",
+  "summary_zh": "A developer used Copilot agent mode and the coding agent to add docs, fix metadata and add input validation; it fixed its own CI failure and the PR passed.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "GitHub Copilot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/add-docs-metadata-fixes-and-validation-to-a-github-action-re",
+  "translated": false,
+  "prompt_en": "In my GitHub repo [owner/repo], which is a GitHub Action, add a clear README covering usage and inputs, fix any problems in action.yml metadata, and add validation for the inputs [list inputs]. Open a pull request, and if CI fails, read the logs and fix it. You are done when CI passes and the PR description summarizes every change.",
+  "source": "github.blog"
+ },
+ {
+  "slug": "send-sentry-bugs-to-copilot-as-github-issues-for-fixing",
+  "title_zh": "Send Sentry bugs to Copilot as GitHub issues for fixing",
+  "summary_zh": "Author turned about 15 Sentry bugs into issues assigned to Copilot, which solved about 60% unaided; it was confidently wrong on failing Vitest tests.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "GitHub Copilot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/send-sentry-bugs-to-copilot-as-github-issues-for-fixing",
+  "translated": false,
+  "prompt_en": "Take the open Sentry errors for [project] that look fixable, and create a GitHub issue for each in [owner/repo] with the stack trace, frequency, and likely cause. Assign each issue to Copilot coding agent so it opens a draft PR. Do not merge anything; I will review each PR, and I want you to flag any PR where the tests are still failing.",
+  "source": "harrisonmilbradt.com",
+  "date": "Nov 10, 2025"
+ },
+ {
+  "slug": "write-unit-tests-and-add-ai-review-to-a-ci-cd-pipeline",
+  "title_zh": "Write unit tests and add AI review to a CI/CD pipeline",
+  "summary_zh": "Author used Copilot agent mode to write unit tests and wired Copilot review and failure analysis into CI/CD, reporting CI test failures fell from 18% to 9%.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "GitHub Copilot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/write-unit-tests-and-add-ai-review-to-a-ci-cd-pipeline",
+  "translated": false,
+  "prompt_en": "In [owner/repo], write unit tests for [module or folder] to cover the main paths and edge cases, using [test framework]. Then add a CI step that runs Copilot code review on each pull request and summarizes any test failures. You are done when the tests pass locally and in CI, and show me the workflow file changes before you commit them.",
+  "source": "dev.to"
+ },
+ {
+  "slug": "use-copilot-coding-agent-to-write-tests-in-dotnet-runtime",
+  "title_zh": "Use Copilot coding agent to write tests in dotnet/runtime",
+  "summary_zh": "The .NET team used Copilot coding agent for ten months in dotnet/runtime; tests were a strength, though some broke on older frameworks or failed in CI.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "GitHub Copilot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/use-copilot-coding-agent-to-write-tests-in-dotnet-runtime",
+  "translated": false,
+  "prompt_en": "In [owner/repo], write tests for [class or feature] following the existing test conventions and covering edge cases. Check that they run on every [framework or version] we support, not just the newest, and fix any CI failures. Open a draft PR listing which test cases you added and anything you could not get passing.",
+  "source": "devblogs.microsoft.com"
+ },
+ {
+  "slug": "draft-a-legal-notice-to-get-a-defective-laptop-refunded",
+  "title_zh": "Draft a legal notice to get a defective laptop refunded",
+  "summary_zh": "Poster used Claude to write a legal notice and got a full refund for a defective refurbished MacBook within 48 hours.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/draft-a-legal-notice-to-get-a-defective-laptop-refunded",
+  "translated": false,
+  "prompt_en": "Help me draft a formal legal notice to [seller name] about a defective [product] I bought on [date] for [price]. The problem is [describe defect and what the seller said], and I want [refund or replacement] within [number] days. Cite the consumer protection rules for [my country or state], keep the tone firm and polite, and give me the finished notice plus a short checklist of evidence to attach. I will send it myself.",
+  "source": "Reddit",
+  "date": "May 1, 2026"
+ },
+ {
+  "slug": "develop-a-working-exploit-for-a-security-challenge-with-agen",
+  "title_zh": "Develop a working exploit for a security challenge with agents",
+  "summary_zh": "A security professional set up AI agents to develop an exploit for the brotli2bitcoin challenge, which took 37 minutes and won the challenge.",
+  "prompt_zh": "",
+  "category_zh": "科学",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/develop-a-working-exploit-for-a-security-challenge-with-agen",
+  "translated": false,
+  "prompt_en": "I'm working on a security CTF challenge called [challenge name/description]. Help me analyze the target, identify the vulnerability, and iteratively develop and test a working exploit script, running it against the challenge until it succeeds. Explain each step of the exploit so I understand how it works, and stop before submitting or sending anything to an external server until I confirm it's ready.",
+  "source": "HN",
+  "date": "Nov 21, 2026"
+ },
+ {
+  "slug": "answer-team-questions-through-a-slack-discord-bot-cli-and-mc",
+  "title_zh": "Answer team questions through a Slack/Discord bot, CLI and MCP server",
+  "summary_zh": "Bluesky's 50-person org uses diderot via Slack/Discord bot, CLI and MCP server for thousands of queries monthly; the post doesn't state what it queries.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/answer-team-questions-through-a-slack-discord-bot-cli-and-mc",
+  "translated": false,
+  "prompt_en": "Build me an assistant connected to our Slack/Discord that can answer team questions about [topic, e.g. our internal docs, codebase, or processes] by pulling from [data sources]. Make it available as a bot, a CLI command, and an MCP server so anyone on the team can query it, and test it with a handful of real questions before rolling it out to everyone.",
+  "source": "Bluesky",
+  "date": "Nov 21, 2026"
+ },
+ {
+  "slug": "search-coworkers-agent-session-logs",
+  "title_zh": "Search coworkers' agent session logs",
+  "summary_zh": "An engineer wrote a skill to grep their own agent session logs, then wanted to search coworkers' agent logs as well.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/search-coworkers-agent-session-logs",
+  "translated": false,
+  "prompt_en": "I have a skill/script that greps my own agent session logs stored at [path]. Extend it so it can also search my coworkers' agent session logs stored at [shared path or location], letting me filter by keyword, date, or person, and show me the results in a readable format. Test it on a sample query before I rely on it.",
+  "source": "Bluesky",
+  "date": "Nov 21, 2026"
+ },
+ {
+  "slug": "run-an-ai-coding-agent-on-dos",
+  "title_zh": "Run an AI coding agent on DOS",
+  "summary_zh": "ClawDOS is an AI coding agent built to run on DOS, per the Show HN headline; no further details are given.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-an-ai-coding-agent-on-dos",
+  "translated": false,
+  "prompt_en": "Help me build a small coding agent that runs on [retro or constrained platform, e.g. DOS, an old Raspberry Pi, a 1990s-era PC emulator]. Start by telling me what is realistic given its limits, then write the code in [language, e.g. C or Turbo Pascal] so it can take a typed request, send it to [AI model API or local model], and show the reply on screen. You are done when I can run it in [emulator or hardware] and get one working response; ask me before installing anything outside this project folder.",
+  "date": "Nov 21, 2026"
+ },
+ {
+  "slug": "process-small-refund-requests-automatically-with-a-zapier-ag",
+  "title_zh": "Process small refund requests automatically with a Zapier agent",
+  "summary_zh": "A small SaaS owner has a Zapier agent handle refund requests under $50 from the past 7 days: it pulls Stripe data, checks the policy in Google Docs, and emails a confirmation. The author also used an agent for invoice follow-ups.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Zapier Agents"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/process-small-refund-requests-automatically-with-a-zapier-ag",
+  "translated": false,
+  "prompt_en": "Set up an agent that handles refund requests under [dollar amount, e.g. $50] from the last [number] days. For each request, have it look up the customer's payment in [payment tool, e.g. Stripe], check my refund policy in [Google Doc or link], and decide whether it qualifies. For qualifying requests, draft a confirmation email to the customer, and pause to show me the refund and email for approval before issuing the refund or sending anything; for the rest, list them with the reason they were skipped.",
+  "source": "aegisai.in"
+ },
+ {
+  "slug": "classify-and-reply-to-customer-inquiries-with-an-ai-agent",
+  "title_zh": "Classify and reply to customer inquiries with an AI agent",
+  "summary_zh": "A Make AI agent classifies form submissions (FAQ, quote, urgent, general), drafts a personalized reply, and pings Slack for emergencies; a separate module sends the email.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Make"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/classify-and-reply-to-customer-inquiries-with-an-ai-agent",
+  "translated": false,
+  "prompt_en": "Build a Make scenario that triggers on each new submission from [your form tool], uses an AI agent to classify it as FAQ, quote request, urgent, or general, and drafts a personalized reply using my details: [business name, services, tone]. If it is urgent, post an alert to Slack channel [channel name]. Save every reply as a draft and pause to show me the email before any send step is turned on; you are done when a test submission of each type is routed correctly.",
+  "source": "medium.com"
+ },
+ {
+  "slug": "sweep-email-and-sync-calendars-each-morning",
+  "title_zh": "Sweep email and sync calendars each morning",
+  "summary_zh": "A user has Claude, via Chrome, access Outlook email and calendar at 7:30 a.m., copy events into Gmail calendar, summarize and prioritize email, and track tasks.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Claude",
+   "Claude in Chrome"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/sweep-email-and-sync-calendars-each-morning",
+  "translated": false,
+  "prompt_en": "Every weekday at [7:30 a.m.], open my Outlook email and calendar in the browser. Copy any new events into my Gmail calendar without creating duplicates, then summarize my unread email and rank it by priority, and add any action items to a task list. Do not reply, delete, or send anything; show me the summary and the list of calendar changes before you make them, and stop once I've approved.",
+  "source": "Reddit",
+  "date": "Jul 1, 2026"
+ },
+ {
+  "slug": "build-a-home-assistant-expert-agent-from-your-config",
+  "title_zh": "Build a Home Assistant expert agent from your config",
+  "summary_zh": "A user made a Gem/agent loaded with their entities and configuration YAML to help generate working smart home code.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Gemini"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-a-home-assistant-expert-agent-from-your-config",
+  "translated": false,
+  "prompt_en": "Act as a Home Assistant expert using the entities and configuration YAML I'm pasting here: [paste entity list and relevant YAML]. I want an automation that does [describe goal, e.g. turn on hall lights at sunset when someone is home]. Write working YAML using only my real entity names, explain where each piece goes, and flag anything you're unsure about so I can check it before saving.",
+  "source": "Reddit",
+  "date": "Jan 1, 2026"
+ },
+ {
+  "slug": "find-leads-and-personalize-first-outreach",
+  "title_zh": "Find leads and personalize first outreach",
+  "summary_zh": "A SaaS startup uses a Claude-powered Lindy agent to identify leads and personalize first outreach, reportedly booking 40+ meetings a month (vendor-sourced).",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Lindy",
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/find-leads-and-personalize-first-outreach",
+  "translated": false,
+  "prompt_en": "Build an agent that finds leads matching [ideal customer profile: role, company size, industry] from [source such as a LinkedIn export or a lead sheet]. For each lead, research their company and write a short personalized first email that mentions [product value in one line]. Save the drafts in [Google Sheet or email drafts] for my approval and do not send anything until I approve it.",
+  "source": "claude.com"
+ },
+ {
+  "slug": "spot-youtube-comment-leads-and-send-to-crm",
+  "title_zh": "Spot YouTube comment leads and send to CRM",
+  "summary_zh": "A Lindy agent watches new YouTube comments, picks out leads, enriches their information and sends them to Slack or a CRM.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Lindy"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/spot-youtube-comment-leads-and-send-to-crm",
+  "translated": false,
+  "prompt_en": "Create an agent that checks new comments on my YouTube channel [channel name] every [interval]. Flag comments that look like potential leads for [my product or service], look up public details about each commenter, and post a summary to [Slack channel or CRM]. It's done when a test run shows correctly flagged leads landing in [destination]; ask me before creating any CRM records.",
+  "source": "rimo.app"
+ },
+ {
+  "slug": "run-fitness-meal-planning-and-weekly-shops",
+  "title_zh": "Run fitness, meal planning and weekly shops",
+  "summary_zh": "A commenter uses a Claude agent for macros, weekly shopping, meal planning and workout programming, plus a personal assistant app tracking purchases and home tasks.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-fitness-meal-planning-and-weekly-shops",
+  "translated": false,
+  "prompt_en": "Act as my fitness and meal planning assistant. My goal is [goal], my stats are [height, weight, activity level], and I eat [diet or restrictions] with a weekly food budget of [amount]. Give me daily macro targets, a 7-day meal plan, a grocery list grouped by store section, and a [number]-day-a-week workout program using [equipment available].",
+  "source": "Reddit",
+  "date": "Nov 17, 2026"
+ },
+ {
+  "slug": "auto-bid-on-sports-cards-on-ebay",
+  "title_zh": "Auto-bid on sports cards on eBay",
+  "summary_zh": "A commenter said Claude built an app that scans eBay, pulls historic comparisons, calculates margins and automatically bids on sports cards.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/auto-bid-on-sports-cards-on-ebay",
+  "translated": false,
+  "prompt_en": "Help me build a small tool that scans eBay for [type of item, e.g. sports cards] listings ending soon, pulls recent sold prices for comparison, and calculates my expected margin after fees and shipping. It should output a ranked list of listings worth bidding on, with my max bid for each based on a [target margin]% margin. Do not place any real bids; show me the list and wait for my go-ahead.",
+  "source": "Reddit",
+  "date": "Nov 19, 2026"
+ },
+ {
+  "slug": "book-travel-with-an-ai-agent",
+  "title_zh": "Book travel with an AI agent",
+  "summary_zh": "An author tested AI booking agents for travel; one ticket booking stalled at a human check and the agent asked for help. Another agent can rebook trips and apply credits.",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/book-travel-with-an-ai-agent",
+  "translated": false,
+  "prompt_en": "Help me book [flight/train/hotel] from [origin] to [destination] on [dates] for [number] travelers, with a budget of [amount] and preferences of [seat, airline, times, etc.]. Search a few sites, then show me the best 2-3 options with prices and conditions. Pause and show me the full details before entering any payment info or confirming a booking, and if you hit a human check or login, stop and ask me to take over.",
+  "source": "resonanceco.com"
+ },
+ {
+  "slug": "draft-b2b-partnership-outreach-emails-that-don-t-sound-like-",
+  "title_zh": "Draft B2B partnership outreach emails that don't sound like AI",
+  "summary_zh": "A poster used Claude for partnership outreach, having it flag what sounded like a cold email, and says their reply rate improved.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/draft-b2b-partnership-outreach-emails-that-don-t-sound-like-",
+  "translated": false,
+  "prompt_en": "I'm writing a partnership outreach email to [type of company/role] about [partnership idea]. Here is my draft: [paste draft]. Rewrite it so it sounds like a real person wrote it, and first flag any phrases that sound like a generic cold email or AI-written text and explain why. Give me two final versions of under [100] words each, with a clear, low-pressure ask at the end.",
+  "source": "Reddit",
+  "date": "Jun 21, 2026"
  }
 ]

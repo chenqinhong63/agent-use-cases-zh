@@ -27690,5 +27690,438 @@
   "prompt_en": "I'm writing a partnership outreach email to [type of company/role] about [partnership idea]. Here is my draft: [paste draft]. Rewrite it so it sounds like a real person wrote it, and first flag any phrases that sound like a generic cold email or AI-written text and explain why. Give me two final versions of under [100] words each, with a clear, low-pressure ask at the end.",
   "source": "Reddit",
   "date": "Jun 21, 2026"
+ },
+ {
+  "slug": "plan-and-price-a-full-trip-through-a-booking-cli",
+  "title_zh": "Plan and price a full trip through a booking CLI",
+  "summary_zh": "An AI agent with no prior knowledge of the tooling planned and priced a Dulles–Barcelona round trip with seven hotel nights in under three minutes, verified bookable by dry run (vendor demo).",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/plan-and-price-a-full-trip-through-a-booking-cli",
+  "translated": false,
+  "prompt_en": "Plan a round trip from [home airport] to [destination city] leaving [start date] and returning [end date], with [number] hotel nights. Find flight and hotel options within a budget of [amount], and give me a single priced itinerary with links so I can check each part is bookable. Stop once you've presented the itinerary and total cost; do not book or enter payment details without showing me exactly what you're about to purchase and getting my approval.",
+  "source": "voyagier.com"
+ },
+ {
+  "slug": "run-marketing-research-content-and-campaigns-with-claude",
+  "title_zh": "Run marketing research, content and campaigns with Claude",
+  "summary_zh": "Marketers use Claude Code for competitive analysis, blog drafts, landing pages and HubSpot setup, and Cowork for a team that watches social channels and drafts brand-voice replies.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude Code",
+   "Claude Cowork"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-marketing-research-content-and-campaigns-with-claude",
+  "translated": false,
+  "prompt_en": "I do marketing for [company/product]. Research our top [number] competitors [competitor names or websites], then write a competitive analysis summary and a first-draft blog post on [topic] in our brand voice, which is [describe voice]. Save everything as files in this folder and stop when I have the analysis and the draft; before publishing or sending anything or changing any account settings, show me what you plan to do and wait for my approval.",
+  "source": "Reddit",
+  "date": "Mar 1, 2025"
+ },
+ {
+  "slug": "generate-ad-reports-and-recommendations-from-ads-data",
+  "title_zh": "Generate ad reports and recommendations from ads data",
+  "summary_zh": "A commenter connects Claude through an MCP connector to Meta, Google and TikTok ads so it produces reports and recommendations for performance marketing.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/generate-ad-reports-and-recommendations-from-ads-data",
+  "translated": false,
+  "prompt_en": "Using my connected ad accounts on [Meta, Google, TikTok] for [date range], create a performance report covering spend, results, cost per result and the top and bottom campaigns for [goal, e.g. leads or sales]. Then give me [number] specific recommendations on what to change, with the data behind each. Stop once the report and recommendations are written, and do not change any budgets, ads or settings in the accounts.",
+  "source": "Reddit",
+  "date": "Oct 30, 2026"
+ },
+ {
+  "slug": "build-a-researched-monthly-social-media-calendar",
+  "title_zh": "Build a researched monthly social media calendar",
+  "summary_zh": "A Claude Code skill researches competitors and communities, then generates 20 posts and 4 video reels in a styled Excel file for up to 12 platforms.",
+  "prompt_zh": "",
+  "category_zh": "创意与内容",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-a-researched-monthly-social-media-calendar",
+  "translated": false,
+  "prompt_en": "Build me a monthly social media content calendar for [brand/business] in [industry] for [month]. Research [3-5 competitors] and communities like [subreddits, groups or hashtags] to see what resonates, then create an Excel file with [number] posts and [number] short video reel ideas for [platforms], including caption, format and suggested posting date. Stop when the spreadsheet is saved in this folder and give me a short summary of the themes you chose.",
+  "source": "Reddit",
+  "date": "Apr 1, 2025"
+ },
+ {
+  "slug": "run-a-realtor-s-facebook-page-with-a-scheduling-agent",
+  "title_zh": "Run a realtor's Facebook page with a scheduling agent",
+  "summary_zh": "An agent built for a realtor automatically schedules Facebook posts, and the builders also ran it on their own marketing while handling Meta API permission changes and retries.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-a-realtor-s-facebook-page-with-a-scheduling-agent",
+  "translated": false,
+  "prompt_en": "Set up an agent that takes the posts I add to [spreadsheet or Google Doc] for my [business type] and schedules them on my Facebook Page [page name] at [days and times]. If a post fails, have it retry [number] times and then email me at [email] with the reason. Before turning it on, show me the schedule and the first post it will publish and wait for my approval.",
+  "source": "Reddit",
+  "date": "May 1, 2026"
+ },
+ {
+  "slug": "query-the-ats-and-draft-intakes-and-phone-screens",
+  "title_zh": "Query the ATS and draft intakes and phone screens",
+  "summary_zh": "A recruiter uses Claude connected to their ATS to answer queries, create job-specific manager intakes, and draft phone screens per job and candidate.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/query-the-ats-and-draft-intakes-and-phone-screens",
+  "translated": false,
+  "prompt_en": "Using my connected ATS, answer this question: [e.g. which open roles have candidates stuck in screening for over 14 days]. Then for the role [job title], draft a hiring manager intake questionnaire and a phone screen script tailored to the job requirements and to [candidate name or profile]. You're done when I have the answer and both drafts; don't send anything or change any records in the ATS.",
+  "source": "Reddit",
+  "date": "Nov 17, 2026"
+ },
+ {
+  "slug": "draft-personalized-recruiting-outreach-and-find-candidates",
+  "title_zh": "Draft personalized recruiting outreach and find candidates",
+  "summary_zh": "A founder gives Claude a job description and has it draft personalized outreach messages and help find candidates.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/draft-personalized-recruiting-outreach-and-find-candidates",
+  "translated": false,
+  "prompt_en": "Here is the job description for [role] at [company]: [paste description]. Draft [number] personalized outreach messages to candidates matching this role, using these profiles or details: [paste candidate info], and suggest where and how to find more people like them. Stop when the drafts and sourcing suggestions are ready; do not send any message.",
+  "source": "Reddit",
+  "date": "Apr 13, 2026"
+ },
+ {
+  "slug": "email-authorized-xero-invoices-to-clients-automatically",
+  "title_zh": "Email authorized Xero invoices to clients automatically",
+  "summary_zh": "A poster builds a Claude Code workflow that watches for a Xero invoice moving from draft to authorized, saves the PDF, and emails it to the client.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Claude Code",
+   "Claude Cowork"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/email-authorized-xero-invoices-to-clients-automatically",
+  "translated": false,
+  "prompt_en": "Build me a workflow that checks my Xero account every [15 minutes] for invoices that have just moved from draft to authorized. For each one, download the invoice PDF, save it to [folder path], and write an email to the client's contact address with a short friendly note and the PDF attached. Do not send any email yet: show me the draft and recipient for each invoice and wait for my approval, and stop once you've shown me a working run on [one test invoice].",
+  "source": "Reddit",
+  "date": "Jun 1, 2026"
+ },
+ {
+  "slug": "spot-issues-in-routine-contracts-with-legal-ai-tools",
+  "title_zh": "Spot issues in routine contracts with legal AI tools",
+  "summary_zh": "A commenter uses legal AI tools like Spellbook and CoCounsel to review standard-form contracts and spot issues before deciding whether a specialist is needed.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/spot-issues-in-routine-contracts-with-legal-ai-tools",
+  "translated": false,
+  "prompt_en": "I'm going to paste a standard-form [type of contract, e.g. NDA, vendor agreement, lease] and I'm on the [party, e.g. customer, tenant] side. Review it clause by clause and flag anything unusual, one-sided, missing, or risky, and rate each issue as low, medium, or high. Finish with a short list of the issues that would justify paying a specialist lawyer to look, and the questions I should ask them. Note that you are not a substitute for legal advice.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "assist-a-home-sale-and-purchase-with-claude",
+  "title_zh": "Assist a home sale and purchase with Claude",
+  "summary_zh": "A homeowner used Claude to choose agents, analyze the market, track key dates, review contracts, and prepare mortgage documentation.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/assist-a-home-sale-and-purchase-with-claude",
+  "translated": false,
+  "prompt_en": "I'm selling my home at [address] and buying a new one in [area], with a target timeline of [dates]. Help me with each stage: compare real estate agents using these notes [paste notes], summarize the market from these comps [paste data], build a calendar of key dates and deadlines, flag unusual or risky clauses in the contracts I paste in, and list the mortgage documents I need to gather. Finish with a one-page checklist and timeline I can follow, and don't treat anything as legal advice without telling me what to confirm with my agent or attorney.",
+  "source": "Reddit",
+  "date": "Oct 1, 2026"
+ },
+ {
+  "slug": "run-equity-research-on-a-stock-with-claude-s-plug-in",
+  "title_zh": "Run equity research on a stock with Claude's plug-in",
+  "summary_zh": "A poster ran all nine commands of Claude's equity research plug-in on a stock they were researching, testing it as a financial analyst-style tool.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-equity-research-on-a-stock-with-claude-s-plug-in",
+  "translated": false,
+  "prompt_en": "Using the equity research plug-in, run every available command on [ticker or company name], including [list commands if you know them, or say all of them]. When you finish, give me a single summary with the bull case, bear case, key risks, valuation takeaways, and any claims you couldn't verify from sources. Mark clearly where the data may be outdated or missing.",
+  "source": "Reddit",
+  "date": "Nov 18, 2026"
+ },
+ {
+  "slug": "score-reddit-investing-picks-blind-on-reasoning-quality",
+  "title_zh": "Score Reddit investing picks blind on reasoning quality",
+  "summary_zh": "Built a multi-agent pipeline with Claude Code that pulled 547 r/ValueInvesting recommendations and scored them on reasoning quality without popularity signals.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Claude Code",
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/score-reddit-investing-picks-blind-on-reasoning-quality",
+  "translated": false,
+  "prompt_en": "Build a pipeline that collects the last [500] stock recommendation posts from [subreddit] and strips out upvotes, comment counts, usernames, and any other popularity signals. Then have separate agents score each pick blind on reasoning quality using this rubric: [e.g., thesis clarity, evidence, risk acknowledgment, valuation logic]. When done, save a ranked CSV and a short report on what the top-scored picks had in common, and show me the rubric and a sample of scores before running the full batch.",
+  "source": "Reddit",
+  "date": "Mar 27, 2026"
+ },
+ {
+  "slug": "turn-bank-statements-into-a-notion-expense-database",
+  "title_zh": "Turn bank statements into a Notion expense database",
+  "summary_zh": "An agent takes dumped bank statements, asks about unclear transactions, then updates the user's expenses database in Notion.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/turn-bank-statements-into-a-notion-expense-database",
+  "translated": false,
+  "prompt_en": "I'm putting my bank statements in [folder path]. Read them, pull out each transaction, and categorize it using these categories: [list categories]. If a transaction is unclear, ask me about it before assigning a category. Once everything is categorized, show me a preview of the rows you plan to add to my Notion expenses database [database name], and wait for my approval before writing anything to Notion.",
+  "source": "Reddit",
+  "date": "Nov 19, 2026"
+ },
+ {
+  "slug": "send-a-weekly-competitor-intelligence-digest",
+  "title_zh": "Send a weekly competitor intelligence digest",
+  "summary_zh": "A Claude Code skill collects competitor info from websites, founder LinkedIn pages, review sites and ad libraries, then sends a digest every Monday morning.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/send-a-weekly-competitor-intelligence-digest",
+  "translated": false,
+  "prompt_en": "Build me a reusable skill that tracks these competitors: [competitor names and URLs]. Each run should check their websites, pricing pages, [LinkedIn pages], review sites like [G2 or Capterra] and ad libraries for changes since last time, then write a one-page digest with the top changes and what I should do about them. Save it as a file in [folder]; before setting up any scheduled send or emailing it, show me the draft and the recipient list and wait for my okay.",
+  "source": "Reddit",
+  "date": "Apr 3, 2026"
+ },
+ {
+  "slug": "turn-lesson-notes-into-tailored-student-feedback-documents",
+  "title_zh": "Turn lesson notes into tailored student feedback documents",
+  "summary_zh": "A language teacher uses an AI agent to turn notes into a formatted feedback document with corrections, explanations and homework tailored to each student's errors.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/turn-lesson-notes-into-tailored-student-feedback-documents",
+  "translated": false,
+  "prompt_en": "I teach [language] to [level] students. Here are my lesson notes for [student name]: [paste notes with their errors and topics covered]. Write a formatted feedback document with their corrections, a short clear explanation of each mistake, and 5 to 8 homework exercises targeting those specific errors. Keep the tone [encouraging/direct], and finish with the document ready to copy into [Google Docs/Word].",
+  "source": "Reddit",
+  "date": "Oct 23, 2026"
+ },
+ {
+  "slug": "build-a-translation-agent-for-text-urls-and-files",
+  "title_zh": "Build a translation agent for text, URLs and files",
+  "summary_zh": "The author used Claude Code to build, with no hand-written code, an agent that translates text, a URL or a local file; it fetched a blog's articles and translated two into Chinese.",
+  "prompt_zh": "",
+  "category_zh": "创意与内容",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-a-translation-agent-for-text-urls-and-files",
+  "translated": false,
+  "prompt_en": "Build me a small translation tool that takes either pasted text, a URL, or a local file path and translates it into [target language]. Fetch the page or read the file, keep the original formatting and headings, and save the result as [output file name]. Test it by translating [a sample URL or file] and show me the result, then tell me how to run it myself.",
+  "source": "baoyu.io",
+  "date": "Nov 22, 2026"
+ },
+ {
+  "slug": "run-an-e-commerce-store-with-a-human-approved-agent",
+  "title_zh": "Run an e-commerce store with a human-approved agent",
+  "summary_zh": "An agent operates the author's own store, handling inventory monitoring, support triage, sales anomaly detection and review summaries, with human approval for money or high-stakes customer matters.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-an-e-commerce-store-with-a-human-approved-agent",
+  "translated": false,
+  "prompt_en": "Set up an agent for my online store on [Shopify/WooCommerce/other] that checks [inventory levels daily], sorts incoming support emails into [categories like shipping, refunds, product questions], flags unusual sales spikes or drops, and sends me a weekly summary of new reviews. It may draft replies and reports on its own, but it must pause and ask me before issuing refunds, changing prices, or replying to angry or high-stakes customers. Show me a test run on [last week's data] so I can confirm it works.",
+  "source": "Reddit",
+  "date": "Jul 1, 2025"
+ },
+ {
+  "slug": "track-tasks-research-ideas-and-review-crypto-history-with-gr",
+  "title_zh": "Track tasks, research ideas and review crypto history with Grok Bot",
+  "summary_zh": "The poster uses Grok Bot to sort and track tasks, research business ideas, help with YouTube editing and make sense of four years of Binance history.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/track-tasks-research-ideas-and-review-crypto-history-with-gr",
+  "translated": false,
+  "prompt_en": "Help me organize my life and projects. Sort this list of tasks into priorities and set up a simple tracker I can check each day: [paste tasks]. Then research [business idea] and give me a one-page summary of the market, competitors, and a first step, and go through my exported [exchange name] transaction history in [file] to summarize my trades, gains and losses by year. Don't take any actions on my accounts, just report.",
+  "source": "Reddit",
+  "date": "Nov 3, 2026"
+ },
+ {
+  "slug": "hand-routine-browser-tasks-to-grok-bot",
+  "title_zh": "Hand routine browser tasks to Grok Bot",
+  "summary_zh": "A user has Grok Bot use the computer for browser tasks that can't be done directly; it handled routine ones for weeks before later refusing some.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/hand-routine-browser-tasks-to-grok-bot",
+  "translated": false,
+  "prompt_en": "Use your computer's browser to do this routine task for me: [describe task, e.g., download the monthly report from site X and save it to a folder]. Repeat it [daily/weekly] and tell me when each run finishes with a short summary of what you did. Pause and show me what you're about to do before submitting any form, making a payment, sending a message, or deleting anything.",
+  "source": "Reddit",
+  "date": "Nov 8, 2026"
+ },
+ {
+  "slug": "run-solopreneur-admin-workflows-with-grok-bot",
+  "title_zh": "Run solopreneur admin workflows with Grok Bot",
+  "summary_zh": "A solopreneur used Grok Bot for business workflows and administrative work until a later update made it worse.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-solopreneur-admin-workflows-with-grok-bot",
+  "translated": false,
+  "prompt_en": "I run a one-person business doing [what you do]. Take over these admin workflows: [invoicing, scheduling, inbox triage, customer follow-ups]. Draft everything first and show me before sending any email, invoice, or payment, and finish each run with a short list of what is done and what needs my decision.",
+  "source": "Reddit",
+  "date": "Nov 8, 2026"
+ },
+ {
+  "slug": "get-hands-free-recipes-while-cooking",
+  "title_zh": "Get hands-free recipes while cooking",
+  "summary_zh": "A commenter uses Grok through AirPods while cooking so they don't have to look at their phone for recipes.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/get-hands-free-recipes-while-cooking",
+  "translated": false,
+  "prompt_en": "I'm cooking [dish] right now and have my hands full, so talk me through the recipe by voice, one step at a time. Wait for me to say 'next' before moving on, and answer questions like substitutions or timing as they come up. I have [ingredients on hand] and need it ready in [time], and the job is done when the dish is plated.",
+  "source": "Reddit",
+  "date": "Nov 15, 2026"
+ },
+ {
+  "slug": "have-grok-bot-read-reports-and-suggest-next-steps",
+  "title_zh": "Have Grok Bot read reports and suggest next steps",
+  "summary_zh": "A commenter checks messages from Grok Bot after it reads reports and suggests the next step; another let it do all the coding but hit weekly limits quickly.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/have-grok-bot-read-reports-and-suggest-next-steps",
+  "translated": false,
+  "prompt_en": "Every [morning/week], read the reports I put in [folder or inbox location] and send me a short message with the key points and the one next step you recommend. If a report needs a decision from me, say so clearly at the top. Don't send anything to other people or change any files without showing me first.",
+  "source": "Reddit",
+  "date": "Nov 20, 2026"
+ },
+ {
+  "slug": "research-your-family-tree-with-claude-code",
+  "title_zh": "Research your family tree with Claude Code",
+  "summary_zh": "The author used Claude Code to do genealogical research and map out multiple branches of their family tree using digitized records.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/research-your-family-tree-with-claude-code",
+  "translated": false,
+  "prompt_en": "I want to research my family tree starting with [your name, birth year, and what you know about parents and grandparents, including places and approximate dates]. Search freely available digitized records such as [FamilySearch, national archives, census or immigration databases] and build a folder of notes with one file per person, citing the source for every fact. Mark anything uncertain as unverified rather than guessing, and finish with a summary file mapping each branch and listing the best next gaps to research.",
+  "source": "Bluesky",
+  "date": "Nov 22, 2026"
+ },
+ {
+  "slug": "run-a-personal-assistant-that-handles-email-and-books-group-",
+  "title_zh": "Run a personal assistant that handles email and books group outings",
+  "summary_zh": "A user's week with Muse: it checked inboxes, drafted replies, booked a bowling night for four in Toronto and tracked split payments; doctor portal booking hit limits.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-a-personal-assistant-that-handles-email-and-books-group-",
+  "translated": false,
+  "prompt_en": "Act as my personal assistant this week. Check my inbox and draft replies to anything that needs one, but show me the drafts before sending. Then plan a [activity, e.g. bowling] night for [number] people in [city] on [date range], find a venue with availability, and track who owes what for the split. Pause and show me the details before booking anything or sending any messages, and finish with a summary of what is done and what is still open.",
+  "source": "Reddit",
+  "date": "Oct 31, 2026"
+ },
+ {
+  "slug": "triage-unread-email-hourly-and-send-monday-briefings",
+  "title_zh": "Triage unread email hourly and send Monday briefings",
+  "summary_zh": "The writer says Muse scans unread email hourly, ranks it by importance, and sends Monday briefings; an early mistake archiving a promo was corrected.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/triage-unread-email-hourly-and-send-monday-briefings",
+  "translated": false,
+  "prompt_en": "Every hour, scan my unread email and rank it by importance: needs a reply today, needs a reply this week, and can wait. Every Monday at [time], send me a briefing with the top items, upcoming deadlines, and anything waiting on someone else. Do not archive or delete anything without asking me first; instead list what you would archive and let me approve it.",
+  "source": "Reddit",
+  "date": "Oct 19, 2026"
+ },
+ {
+  "slug": "give-an-agent-its-own-email-to-finish-sign-ups",
+  "title_zh": "Give an agent its own email to finish sign-ups",
+  "summary_zh": "The poster gave Muse its own email address so it can complete account sign-ups and handle verification emails without stalling.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/give-an-agent-its-own-email-to-finish-sign-ups",
+  "translated": false,
+  "prompt_en": "I need to sign up for [service or website] using the dedicated email address [agent email address]. Fill out the sign-up form, then open that inbox, find the verification email, and complete confirmation. Pause and show me the details before submitting anything that involves payment or personal information, and stop once the account is verified and I can log in.",
+  "source": "Reddit",
+  "date": "Oct 29, 2026"
+ },
+ {
+  "slug": "book-flights-with-an-agent-with-a-failed-email-entry",
+  "title_zh": "Book flights with an agent (with a failed email entry)",
+  "summary_zh": "One commenter had Muse book flights but it entered the email wrong, so no confirmation arrived; a partial success.",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/book-flights-with-an-agent-with-a-failed-email-entry",
+  "translated": false,
+  "prompt_en": "Find and book a flight from [origin] to [destination] departing [date] and returning [date] for [number] traveler(s), with a budget of [price] and preference for [nonstop, time of day, airline]. Use my email [email] for the confirmation. Before entering payment details or finalizing, pause and show me the itinerary, price, and the email address you typed so I can check it, then confirm that a confirmation page appeared.",
+  "source": "Reddit",
+  "date": "Nov 18, 2026"
  }
 ]

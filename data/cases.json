@@ -28123,5 +28123,370 @@
   "prompt_en": "Find and book a flight from [origin] to [destination] departing [date] and returning [date] for [number] traveler(s), with a budget of [price] and preference for [nonstop, time of day, airline]. Use my email [email] for the confirmation. Before entering payment details or finalizing, pause and show me the itinerary, price, and the email address you typed so I can check it, then confirm that a confirmation page appeared.",
   "source": "Reddit",
   "date": "Nov 18, 2026"
+ },
+ {
+  "slug": "run-an-agent-swarm-attempting-to-solve-p-vs-np",
+  "title_zh": "Run an agent swarm attempting to solve P vs. NP",
+  "summary_zh": "A swarm of AI agents works on the P vs. NP problem, with progress shown on a live dashboard.",
+  "prompt_zh": "",
+  "category_zh": "科学",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-an-agent-swarm-attempting-to-solve-p-vs-np",
+  "translated": false,
+  "prompt_en": "Set up a small swarm of sub-agents to work on [a hard open problem, e.g. a specific NP-hard problem or a restricted case of P vs. NP]. Have each sub-agent try a different approach, such as [approach 1], [approach 2], and [approach 3], and write its findings and any checkable proofs or counterexamples to a shared folder. Build a simple local dashboard page showing each agent's status and results, and stop after [number] rounds with a summary of what was tried, what failed, and what looks promising, being clear about anything unverified.",
+  "date": "Nov 22, 2026"
+ },
+ {
+  "slug": "mark-old-gmail-emails-as-read-with-an-agent",
+  "title_zh": "Mark old Gmail emails as read with an agent",
+  "summary_zh": "A user asked ChatGPT Agent Mode with a Gmail connector to mark emails before a date as read; it was unclear if it finished and the agent's status was inconsistent.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "ChatGPT Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/mark-old-gmail-emails-as-read-with-an-agent",
+  "translated": false,
+  "prompt_en": "Using my connected Gmail, find all emails in my inbox received before [date] that are unread and mark them as read. First tell me how many emails match and show me a few examples, then wait for my go-ahead before changing anything. When finished, report the final count marked as read and confirm that no unread emails before [date] remain, or tell me clearly what could not be completed.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "collect-receipts-for-expense-reimbursements",
+  "title_zh": "Collect receipts for expense reimbursements",
+  "summary_zh": "The poster used OpenClaw to gather receipts for several trip reimbursements, saving them quite some time.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "OpenClaw"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/collect-receipts-for-expense-reimbursements",
+  "translated": false,
+  "prompt_en": "I took [number] trips for work between [start date] and [end date]. Search my email at [email account] and any folders I point you to for receipts from those trips, save each one into a folder named [trip name] with the date, vendor, and amount in the filename, and give me a spreadsheet totaling each trip. You're done when every trip has its receipts and a total, and you've flagged any that look missing. Don't submit anything to my employer's expense system; show me the finished package first.",
+  "source": "Reddit",
+  "date": "Apr 1, 2026"
+ },
+ {
+  "slug": "monitor-feeds-for-story-angles-and-draft-content",
+  "title_zh": "Monitor feeds for story angles and draft content",
+  "summary_zh": "A commenter's OpenClaw watches Reddit and news for story angles, drafts content, logs to memory, and pings Telegram, cutting 2-3 hours of work to about 20 minutes of review.",
+  "prompt_zh": "",
+  "category_zh": "创意与内容",
+  "agents": [
+   "OpenClaw"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/monitor-feeds-for-story-angles-and-draft-content",
+  "translated": false,
+  "prompt_en": "Every [morning/hour] check [subreddits and news sites] for new stories related to [my topic or beat] and pick the [3-5] with the strongest angles for my audience of [audience]. For each one, write a short draft in my voice ([tone description]) and save it to your memory log so you don't repeat topics. Then send me a summary of the picks on [Telegram/other chat app]. Never publish or post anything; drafts only, for me to review.",
+  "source": "Reddit",
+  "date": "Mar 1, 2026"
+ },
+ {
+  "slug": "plan-and-book-a-new-zealand-south-island-trip",
+  "title_zh": "Plan and book a New Zealand South Island trip",
+  "summary_zh": "The poster used OpenClaw and Claude Code to plan a South Island trip; the agent handled much of the booking work, though they still made 12 of 13 bookings themselves.",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "OpenClaw",
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/plan-and-book-a-new-zealand-south-island-trip",
+  "translated": false,
+  "prompt_en": "Help me plan a [number]-day trip to [destination] from [start date] to [end date] for [number of travelers], with a budget of [amount] and interests in [interests]. Create a day-by-day itinerary in a file, plus a checklist of every booking I need (flights, lodging, car, activities) with links, prices, and cancellation terms. You're done when the checklist is complete and ordered by what to book first. Don't book or pay for anything; pause and show me the details before any purchase step.",
+  "source": "Reddit",
+  "date": "Feb 1, 2026"
+ },
+ {
+  "slug": "script-image-metadata-tagging-and-photoshop-embedding",
+  "title_zh": "Script image metadata tagging and Photoshop embedding",
+  "summary_zh": "A commenter had Claude write scripts that scan images, write metadata, and embed it in Photoshop, building a batch web-image mockup tool.",
+  "prompt_zh": "",
+  "category_zh": "创意与内容",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/script-image-metadata-tagging-and-photoshop-embedding",
+  "translated": false,
+  "prompt_en": "Write me a script that scans the images in [folder path], generates a descriptive title, caption, and keywords for each one, and writes them into the file's metadata. Then add a step that [embeds or uses this metadata in Photoshop/another tool] for a batch mockup of [web page or layout]. Test it on [3] copies of my images first and show me the results. Only run it on the full folder after I approve, and never overwrite the originals.",
+  "source": "Reddit",
+  "date": "Nov 9, 2026"
+ },
+ {
+  "slug": "schedule-weekly-internet-research-summaries",
+  "title_zh": "Schedule weekly internet research summaries",
+  "summary_zh": "The poster is building a Cowork agent that collects research online and summarizes it, and is working out how to schedule it weekly.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Claude Cowork"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/schedule-weekly-internet-research-summaries",
+  "translated": false,
+  "prompt_en": "Every [day] at [time], research the latest news and publications on [topic] from [preferred sources or websites], and write a one-page summary covering the [5] most important findings with links. Save it to [folder] as a dated file and include a short list of questions worth following up. Run it once now so I can check the format, and then set it up to repeat weekly. Don't email or share it with anyone without asking me.",
+  "source": "Reddit",
+  "date": "Feb 16, 2026"
+ },
+ {
+  "slug": "explain-a-denied-insurance-claim-from-eob-and-policy",
+  "title_zh": "Explain a denied insurance claim from EOB and policy",
+  "summary_zh": "Claude Code cross-referenced an EOB and policy documents in about three minutes and showed the author owed nothing beyond what they already paid; it did not file anything.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/explain-a-denied-insurance-claim-from-eob-and-policy",
+  "translated": false,
+  "prompt_en": "I'm putting my Explanation of Benefits at [path to EOB file] and my policy documents in [folder path] in the same folder. Read them and explain why this claim was denied or reduced, what I actually owe, and whether the amount matches my plan's deductible, copay and coinsurance. Give me a short plain-English summary plus the exact policy language you relied on, and do not contact anyone or file anything.",
+  "source": "common-sense.com"
+ },
+ {
+  "slug": "audit-vendor-dashboard-paths-and-correct-stale-docs",
+  "title_zh": "Audit vendor dashboard paths and correct stale docs",
+  "summary_zh": "Claude in Chrome walked 106 dashboard paths read-only across the poster's Stripe, Cloudflare, Supabase and GitHub accounts, and eight changed paths were corrected in the records.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Claude in Chrome",
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/audit-vendor-dashboard-paths-and-correct-stale-docs",
+  "translated": false,
+  "prompt_en": "Go through this list of dashboard paths for my [Stripe, Cloudflare, Supabase, GitHub] accounts, which is in [paste the list or doc]. Open each one in read-only mode, never click save, delete or change any setting, and tell me whether the path still works and matches what my docs say. A finished job is a table of each path with its status, and a list of corrected paths for the docs. Show me the corrections before you edit anything.",
+  "source": "Reddit",
+  "date": "Oct 31, 2026"
+ },
+ {
+  "slug": "bulk-upload-documents-to-a-website-via-browser-agent",
+  "title_zh": "Bulk upload documents to a website via browser agent",
+  "summary_zh": "The poster pairs Claude Desktop for file management with Claude in Chrome to upload many documents to a website.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Claude",
+   "Claude in Chrome"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/bulk-upload-documents-to-a-website-via-browser-agent",
+  "translated": false,
+  "prompt_en": "I have a folder of documents at [folder path] that need to go to [website name and upload page URL]. Sort the files by [name, date or category], then upload them one by one in the browser, matching each to the right field or folder on the site. Before you submit anything, show me the full list of what will be uploaded where and wait for my approval. When done, give me a checklist of what succeeded and what failed.",
+  "source": "Reddit",
+  "date": "Oct 17, 2026"
+ },
+ {
+  "slug": "diagnose-and-clean-up-a-slow-windows-pc",
+  "title_zh": "Diagnose and clean up a slow Windows PC",
+  "summary_zh": "Users had Claude connect to Task Manager, diagnose performance problems, and guide them through the fixes to get their computer running well again.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/diagnose-and-clean-up-a-slow-windows-pc",
+  "translated": false,
+  "prompt_en": "My Windows PC has been running slowly, especially when I [describe, such as starting up or opening many tabs]. Help me diagnose it by walking me through what to check in Task Manager, such as CPU, memory, disk and startup apps, and tell me what each reading means. Then give me step-by-step fixes ranked by impact, and ask me to confirm before any step that deletes files or uninstalls software.",
+  "source": "Reddit",
+  "date": "Nov 19, 2026"
+ },
+ {
+  "slug": "automate-video-editing-on-a-personal-pc",
+  "title_zh": "Automate video editing on a personal PC",
+  "summary_zh": "A user films clips on their phone, sends them to their computer, and Claude runs the editing pipeline without an editing app or MCP plugin.",
+  "prompt_zh": "",
+  "category_zh": "创意与内容",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/automate-video-editing-on-a-personal-pc",
+  "translated": false,
+  "prompt_en": "I film short clips on my phone and move them to [folder path] on my computer. Set up a repeatable pipeline using free command-line tools like ffmpeg that takes the clips in that folder and produces one finished video with [trims, cuts, captions, music, resolution]. A finished job is one script I can run on a new folder of clips, and a sample output from my current files. Never overwrite the original clips.",
+  "source": "Reddit",
+  "date": "Nov 16, 2026"
+ },
+ {
+  "slug": "handle-client-jira-tickets-and-fixes-with-claude",
+  "title_zh": "Handle client Jira tickets and fixes with Claude",
+  "summary_zh": "A developer has Claude Code reply to client Jira tickets and fix issues from the client's feedback, with the client believing they are talking to the human developer.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/handle-client-jira-tickets-and-fixes-with-claude",
+  "translated": false,
+  "prompt_en": "Here are the ticket details and my repo at [path]. Read the ticket [ticket ID or pasted text], find the cause in the code, implement a fix, and run the tests. Then draft a clear, professional reply for me to send back to the client explaining what changed. Show me the diff and the draft reply, and wait for my approval before committing, pushing or posting anything.",
+  "source": "Reddit",
+  "date": "Nov 20, 2026"
+ },
+ {
+  "slug": "control-agent-sessions-across-computers-from-mobile",
+  "title_zh": "Control agent sessions across computers from mobile",
+  "summary_zh": "A commenter used Claude to build a mobile app, plus a Mac app for handoff, to control agent sessions across multiple computers.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/control-agent-sessions-across-computers-from-mobile",
+  "translated": false,
+  "prompt_en": "Help me build a small mobile-friendly web app, plus a simple desktop companion for [Mac or Windows], that lets me see and control my coding agent sessions running on [number] computers. It should list active sessions per machine, show their latest output, and let me send a new instruction from my phone. Start with a plan and an architecture I can run on my own network, then build the first working version that connects two machines.",
+  "source": "Reddit",
+  "date": "Nov 19, 2026"
+ },
+ {
+  "slug": "run-an-agency-s-work-through-many-claude-code-sessions",
+  "title_zh": "Run an agency's work through many Claude Code sessions",
+  "summary_zh": "A small agency owner uses Claude Code for nearly everything, running many long-lived sessions across projects on the machines where the work lives.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-an-agency-s-work-through-many-claude-code-sessions",
+  "translated": false,
+  "prompt_en": "I run a small [type of agency] and want to manage my work through Claude Code sessions, one per project. Help me set up a folder structure for [list of 3 projects], with a short instruction file in each that describes the client, goals, tone, and rules about what you may and may not do. Then start a session for [project name] and complete this task: [describe task]. Pause before sending anything to a client or deleting any file.",
+  "source": "Reddit",
+  "date": "Nov 16, 2026"
+ },
+ {
+  "slug": "order-a-pizza-to-your-house-with-an-agent",
+  "title_zh": "Order a pizza to your house with an agent",
+  "summary_zh": "A writer asked ChatGPT Agent to find a well-rated local pizza place and order; it clicked through pop-ups, couldn't reach the order section, and gave up.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "ChatGPT Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/order-a-pizza-to-your-house-with-an-agent",
+  "translated": false,
+  "prompt_en": "Find a well-rated [cuisine, e.g. pizza] place near [my address or neighborhood] that is open now and delivers. Open its ordering page and build an order for [items and quantities]. If a pop-up or page blocks you from reaching the menu, tell me where you got stuck instead of looping. Stop before payment and show me the restaurant, items, delivery fee, and total so I can approve.",
+  "source": "tech.yahoo.com"
+ },
+ {
+  "slug": "turn-saved-recipes-into-a-weekly-meal-plan-and-carts",
+  "title_zh": "Turn saved recipes into a weekly meal plan and carts",
+  "summary_zh": "A Claude Code skill using Claude in Chrome turns saved Pinterest and Instagram recipes into a plan, checks budget, then fills Whole Foods and Instacart carts after approval without checking out.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "Claude Code",
+   "Claude in Chrome"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/turn-saved-recipes-into-a-weekly-meal-plan-and-carts",
+  "translated": false,
+  "prompt_en": "Take the recipes I saved in [Pinterest board or Instagram collection link] and pick [number] for this week's dinners for [number] people. Combine the ingredients into one shopping list, check it against my budget of [$ amount], and show me the plan. After I approve it, fill my [Whole Foods or Instacart] cart in the browser, then stop and don't check out.",
+  "source": "github.com"
+ },
+ {
+  "slug": "produce-a-short-film-end-to-end-with-an-agent",
+  "title_zh": "Produce a short film end to end with an agent",
+  "summary_zh": "The poster says Claude Code wrote the script, voiced lines with a local TTS model, made the music, rendered frames in headless Chrome, and mixed it with ffmpeg.",
+  "prompt_zh": "",
+  "category_zh": "创意与内容",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/produce-a-short-film-end-to-end-with-an-agent",
+  "translated": false,
+  "prompt_en": "Help me make a [length, e.g. 60-second] short film about [premise] in the folder [path]. Write the script, generate voiceover with a local text-to-speech tool, create or source background music, render the visuals as frames, and assemble everything with ffmpeg. Finish with one playable file named [filename] and a short note on how to re-render it.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "run-a-solo-saas-with-an-agent-that-texts-you",
+  "title_zh": "Run a solo SaaS with an agent that texts you",
+  "summary_zh": "A solo founder of a hosted SaaS has Claude Code write most code and text them when it needs input, taking instructions by phone.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-a-solo-saas-with-an-agent-that-texts-you",
+  "translated": false,
+  "prompt_en": "Work on my codebase at [path] to ship [feature or bug list], and run the tests as you go. When you need a decision or hit something you can't resolve, send me a short message at [text or chat channel] with your question and options, then wait for my reply. Finish each task with a summary of changes and a branch or pull request, and don't deploy to production without my approval.",
+  "source": "Reddit",
+  "date": "Jul 1, 2026"
+ },
+ {
+  "slug": "open-every-ai-story-from-a-news-homepage-in-tabs",
+  "title_zh": "Open every AI story from a news homepage in tabs",
+  "summary_zh": "A Comet user had it open The Verge's homepage and open all AI stories in new tabs, and also reported it handling email, LinkedIn messages and Reddit posts.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Perplexity Comet"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/open-every-ai-story-from-a-news-homepage-in-tabs",
+  "translated": false,
+  "prompt_en": "Open [news site homepage URL] and find every story about [topic, e.g. AI] currently on the page. Open each one in its own new tab, skipping duplicates, videos, and sponsored posts. When done, tell me how many tabs you opened and list the headlines in the order of the tabs.",
+  "source": "Reddit",
+  "date": "Jan 1, 2025"
+ },
+ {
+  "slug": "fill-forms-and-scan-marketplace-with-a-browser-agent",
+  "title_zh": "Fill forms and scan Marketplace with a browser agent",
+  "summary_zh": "A user used Comet to fill forms, complete compliance trainings, and scan Facebook Marketplace, though it recently began refusing those agentic tasks.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Perplexity Comet"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/fill-forms-and-scan-marketplace-with-a-browser-agent",
+  "translated": false,
+  "prompt_en": "Open [website or form URL] and fill out the form using these details: [your info]. Stop on the final page before submitting and show me everything you entered so I can confirm. Separately, scan [marketplace site] for [item] within [distance] of [location] under $[price] and list the 5 best listings with price, location, and link.",
+  "source": "Reddit",
+  "date": "Jan 1, 2025"
+ },
+ {
+  "slug": "book-things-with-chrome-s-gemini-agent",
+  "title_zh": "Book things with Chrome's Gemini agent",
+  "summary_zh": "A user had Gemini in Chrome book things for them and used AI to craft prompts and instructions to improve agentic booking.",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "Gemini"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/book-things-with-chrome-s-gemini-agent",
+  "translated": false,
+  "prompt_en": "Use Agent Mode to book [what to book, e.g. a table for 4, a haircut, a hotel night] in [city/location] on [date and time window]. My preferences are [budget, cuisine or style, distance, must-haves]. Compare at least three options, recommend one, and take it through to the final confirmation screen. Pause before entering payment details or pressing the final confirm button so I can review the details, and stop once the booking is confirmed and you've given me the confirmation summary.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "control-a-pc-for-small-tasks-with-chatgpt",
+  "title_zh": "Control a PC for small tasks with ChatGPT",
+  "summary_zh": "A user has ChatGPT control their PC to install game mods, update apps, do color correction in DaVinci, and organize files, and asks whether Gemini can do the same.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "ChatGPT",
+   "Gemini"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/control-a-pc-for-small-tasks-with-chatgpt",
+  "translated": false,
+  "prompt_en": "Take control of my computer and handle these small tasks one at a time: [task 1, e.g. install mods for a game], [task 2, e.g. update my outdated apps], [task 3, e.g. organize my Downloads folder by file type]. Tell me what you plan to do before each task and narrate as you go. Pause and ask me before deleting any files, running installers from unfamiliar sources, or changing system settings, and finish with a short list of what was done and anything that needs my attention.",
+  "source": "Reddit"
  }
 ]

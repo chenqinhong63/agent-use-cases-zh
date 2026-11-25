@@ -28488,5 +28488,329 @@
   "translated": false,
   "prompt_en": "Take control of my computer and handle these small tasks one at a time: [task 1, e.g. install mods for a game], [task 2, e.g. update my outdated apps], [task 3, e.g. organize my Downloads folder by file type]. Tell me what you plan to do before each task and narrate as you go. Pause and ask me before deleting any files, running installers from unfamiliar sources, or changing system settings, and finish with a short list of what was done and anything that needs my attention.",
   "source": "Reddit"
+ },
+ {
+  "slug": "fill-tourist-visa-applications-on-government-portals",
+  "title_zh": "Fill tourist visa applications on government portals",
+  "summary_zh": "AI agents operate a browser on official government portals to fill visa applications, check documents, and book appointments, with human expert review of each file.",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/fill-tourist-visa-applications-on-government-portals",
+  "translated": false,
+  "prompt_en": "I'm a [your nationality] citizen applying for a [country] [visa type] visa. Go to the official [country] government visa portal, fill in the application using the details I give you, and list every document I need to upload and any appointment slots available near [your city]. Stop and show me the full filled-in form and any fees before you submit anything, pay, or book an appointment.",
+  "source": "veeza.ai"
+ },
+ {
+  "slug": "control-netflix-and-send-messages-by-voice",
+  "title_zh": "Control Netflix and send messages by voice",
+  "summary_zh": "A user had Alexa+ find and navigate to an anime on Netflix, announce calendar events, and send emails and texts from simple commands.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Alexa+"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/control-netflix-and-send-messages-by-voice",
+  "translated": false,
+  "prompt_en": "Alexa, open Netflix and find [show or movie title], then start [episode or season]. Then read out my calendar events for [today or date], and send a text to [contact name] saying [message]. Read each message back to me and wait for my okay before sending it.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "plan-meals-and-order-the-groceries",
+  "title_zh": "Plan meals and order the groceries",
+  "summary_zh": "A parent used Dot to create meals, build a grocery list, and fill the cart and order through a store app.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "Dots"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/plan-meals-and-order-the-groceries",
+  "translated": false,
+  "prompt_en": "Plan [number] dinners for my [household description] for the week of [date], keeping to [dietary needs, budget, and foods we dislike]. Build one combined grocery list, then open my [store name] app and fill the cart with those items, picking [brand or price preferences]. Stop before checkout and show me the cart, substitutions, and total so I can approve the order.",
+  "source": "Reddit",
+  "date": "Oct 16, 2026"
+ },
+ {
+  "slug": "use-an-agent-as-a-personal-assistant-that-emails-family",
+  "title_zh": "Use an agent as a personal assistant that emails family",
+  "summary_zh": "A user shifted Dot from orchestrator to personal assistant, and it emailed their mum to introduce itself on its own.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Dots"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/use-an-agent-as-a-personal-assistant-that-emails-family",
+  "translated": false,
+  "prompt_en": "Act as my personal assistant. Each morning, review my inbox and calendar, summarize what needs my attention, and draft replies for anything routine. Draft but do not send any email to [family member or contact] until I approve it, and show me the draft first.",
+  "source": "Reddit",
+  "date": "Sep 30, 2026"
+ },
+ {
+  "slug": "automate-browser-workflows-in-a-cloud-browser",
+  "title_zh": "Automate browser workflows in a cloud browser",
+  "summary_zh": "A user set up Dot in its cloud browser for autonomous workflows, but it often broke down and asked for repeated logins and permissions.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Dots"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/automate-browser-workflows-in-a-cloud-browser",
+  "translated": false,
+  "prompt_en": "Using your cloud browser, run this workflow for me: [describe the steps, such as logging into a site, exporting a report, and filling a spreadsheet]. Tell me up front which logins or permissions you need so I can grant them all at once, then carry out the task and report what you did. Pause and show me before you submit any form, send anything, or delete anything.",
+  "source": "Reddit",
+  "date": "Oct 29, 2026"
+ },
+ {
+  "slug": "manage-plex-and-schedule-data-scraping-cron-jobs",
+  "title_zh": "Manage Plex and schedule data-scraping cron jobs",
+  "summary_zh": "A user has Hermes Agent help manage Plex and set up cron jobs that scrape and archive data.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Hermes Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/manage-plex-and-schedule-data-scraping-cron-jobs",
+  "translated": false,
+  "prompt_en": "Help me manage my Plex server at [server address or host]. First review the library and tell me what needs attention, such as [missing metadata, duplicate files, storage use]. Then set up a cron job that runs [script or command] on [schedule] to scrape and archive [data source] into [folder path], with logs I can check. Show me the exact crontab entry and the script before you install them, and do not delete any existing files. Stop when a test run succeeds and you have explained how to check it.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "revive-old-macbook-airs-as-headless-mac-mini-extensions",
+  "title_zh": "Revive old MacBook Airs as headless Mac mini extensions",
+  "summary_zh": "A user had Hermes Agent help turn two old MacBook Air laptops into headless extensions of a Mac mini and asked it for directive text for each agent.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Hermes Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/revive-old-macbook-airs-as-headless-mac-mini-extensions",
+  "translated": false,
+  "prompt_en": "I want to turn my old [laptop model] into a headless extension of my [main computer, e.g. Mac mini]. Walk me through the setup step by step, covering remote access, auto-login, sleep settings, and how the machines share work, and tell me what to run on each one. Then write a short directive text for the agent on each machine describing its role: [role of main machine], [role of laptop 1], [role of laptop 2]. Pause and show me any command that changes system settings or erases data before running it. You are done when I can reach each laptop remotely and each agent has its directive.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "run-a-trading-agent-team-and-build-decks-with-a-script",
+  "title_zh": "Run a trading agent team and build decks with a script",
+  "summary_zh": "A user organizes a trading setup with an orchestrator and sub-agents for analysis and debate, and had Hermes write a Python script to build decks, though it got confused by direct file edits.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "Hermes Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-a-trading-agent-team-and-build-decks-with-a-script",
+  "translated": false,
+  "prompt_en": "Help me set up a team of agents for [analysis task, e.g. evaluating stocks I am watching]: one orchestrator and sub-agents for [analysis], [bull case], and [bear case] who debate before the orchestrator summarizes. Then write a Python script that builds a slide deck from the summary at [output path], and have the script generate the files rather than editing existing files directly. Do not place any trades or connect to any brokerage account. The job is finished when I can run the script and get a deck for [ticker or topic].",
+  "source": "Reddit"
+ },
+ {
+  "slug": "let-an-ai-agent-read-and-draft-replies-in-your-inbox",
+  "title_zh": "Let an AI agent read and draft replies in your inbox",
+  "summary_zh": "An author ran an agent on his professional inbox for a week to read, draft and send email in his voice; it guessed wrongly on one reply, so he kept it in draft mode.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/let-an-ai-agent-read-and-draft-replies-in-your-inbox",
+  "translated": false,
+  "prompt_en": "Go through my inbox for [email account] over the last [number] days and read every message that needs a reply. For each one, write a draft reply in my voice, using my past sent emails as a guide, and save it as a draft only. Do not send anything; when you are finished, give me a list of the drafts and flag any where you had to guess at facts, dates or commitments.",
+  "source": "aidoers.io"
+ },
+ {
+  "slug": "run-a-personal-assistant-over-an-obsidian-vault",
+  "title_zh": "Run a personal assistant over an Obsidian vault",
+  "summary_zh": "An OpenClaw agent connected to her Obsidian vault sends a daily agenda, checks progress, and creates or reschedules tasks and marks habits via Discord.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "OpenClaw"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-an-obsidian-vault",
+  "translated": false,
+  "prompt_en": "Connect to my Obsidian vault at [vault path] and my [Discord/chat app]. Every morning at [time], send me an agenda built from my tasks and notes, and check in on progress in the evening. When I message you, create or reschedule tasks and mark habits done in the vault; ask me before you delete or overwrite any note.",
+  "source": "productivematters.substack.com"
+ },
+ {
+  "slug": "build-and-launch-a-market-research-saas-with-replit",
+  "title_zh": "Build and launch a market research SaaS with Replit",
+  "summary_zh": "The poster used Replit's agent to help build a market research SaaS and made a first sale after months of weekend work.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Replit Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-and-launch-a-market-research-saas-with-replit",
+  "translated": false,
+  "prompt_en": "Help me build a [type of product, e.g. market research tool] web app for [target customer]. Start by proposing the core features and a simple first version I can show people, then build it step by step with sign-up, [key feature] and a way to take payment. Pause and ask me before you connect any payment account or publish it live.",
+  "source": "Reddit",
+  "date": "May 28, 2026"
+ },
+ {
+  "slug": "build-an-exam-marking-app-for-a-hackathon",
+  "title_zh": "Build an exam-marking app for a hackathon",
+  "summary_zh": "The poster built a mobile web app that scans exam papers and marks them with AI using Replit Agent, winning $10,000 for about $15 in credits over 22 hours.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Replit Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-an-exam-marking-app-for-a-hackathon",
+  "translated": false,
+  "prompt_en": "Build a mobile-friendly web app that lets me [scan/upload] [type of document, e.g. exam papers] with my phone camera and uses AI to [mark/grade/summarize] them against [answer key or rubric]. Finish when I can upload a sample document and see a score with a short explanation for each answer. Ask me before you publish it or connect any paid API keys.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "write-a-forth-implementation-for-the-pdp-7",
+  "title_zh": "Write a Forth implementation for the PDP-7",
+  "summary_zh": "A retired engineer used Claude to write a Forth for the PDP-7 in one morning, including a turtle graphics library and an assembler for the Type 340 display.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/write-a-forth-implementation-for-the-pdp-7",
+  "translated": false,
+  "prompt_en": "I want to write a [language or tool, e.g. Forth interpreter] for [vintage or unusual machine, e.g. PDP-7] in [assembly or host language]. Start by asking me for the instruction set docs or an emulator I have, then build it in small steps, running tests after each one. Finish with a working core plus one demo program like [e.g. turtle graphics], and a short README explaining how to build and run it.",
+  "source": "HN",
+  "date": "Nov 24, 2026"
+ },
+ {
+  "slug": "handle-patient-calls-for-appointments-bills-and-refills",
+  "title_zh": "Handle patient calls for appointments, bills and refills",
+  "summary_zh": "MUSC Health's voice agent Emily handles 25% of patient calls, booking appointments, taking bill payments and processing prescription refill requests.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/handle-patient-calls-for-appointments-bills-and-refills",
+  "translated": false,
+  "prompt_en": "Build me a phone assistant for [clinic or office name] that answers patient calls, books or reschedules appointments in [scheduling system], and logs refill requests for staff to review. It should answer billing questions using [billing info source] but must not take payments or submit refills itself. It should pass any call it cannot handle to [staff phone or email]. Before turning it on, show me the call flow and a sample test call for me to approve.",
+  "source": "pymnts.com"
+ },
+ {
+  "slug": "run-a-local-business-s-whatsapp-orders-with-an-ai-assistant",
+  "title_zh": "Run a local business's WhatsApp orders with an AI assistant",
+  "summary_zh": "Built in n8n for a paying client: transcribes voice notes, analyzes images, and hands buying intent to an order-execution agent.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "n8n"
+  ],
+  "accounts": 3,
+  "url": "https://agentusecases.ai/use-case/run-a-local-business-s-whatsapp-orders-with-an-ai-assistant",
+  "translated": false,
+  "prompt_en": "Help me build an n8n workflow for [business name] that receives incoming WhatsApp messages. It should transcribe voice notes, describe any images, and work out whether the customer wants to buy [products]. If so, it should pass the order details to a second agent that prepares the order in [order system]. Pause for my approval before placing any order or sending any reply to a customer. You're done when a test voice note and a test photo each produce the correct order summary.",
+  "source": "Reddit",
+  "date": "Mar 1, 2026"
+ },
+ {
+  "slug": "check-appointment-availability-through-a-booking-chatbot",
+  "title_zh": "Check appointment availability through a booking chatbot",
+  "summary_zh": "An n8n chatbot workflow has a booking agent that calls another workflow to check appointment availability in Booksy.",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "n8n"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/check-appointment-availability-through-a-booking-chatbot",
+  "translated": false,
+  "prompt_en": "Help me build an n8n chatbot for [business name] that answers customer questions and, when someone asks about an appointment, calls a separate workflow to check open slots in [booking system, e.g. Booksy] for [service] on [date range]. It should reply with the available times. It should not book anything until the customer confirms and I have reviewed the booking step. You're done when a test chat returns real availability.",
+  "source": "Reddit"
+ },
+ {
+  "slug": "turn-tagged-readwise-articles-into-notion-summaries",
+  "title_zh": "Turn tagged Readwise articles into Notion summaries",
+  "summary_zh": "A Zapier Agent reads an article in Readwise Reader, reviews the user's highlights, and drafts a summary into a Notion database when a specific tag is applied.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Zapier Agents"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/turn-tagged-readwise-articles-into-notion-summaries",
+  "translated": false,
+  "prompt_en": "Create a Zapier Agent that triggers when I add the tag [tag name] to an article in Readwise Reader. It should read the article and my highlights, then draft a summary of [length] that reflects the points I highlighted and add it to my Notion database [database name]. Include the title, link and tags in the Notion entry. You're done when a test article with the tag produces a correct Notion page, and show me the draft before the first save.",
+  "source": "Reddit",
+  "date": "Jan 30, 2025"
+ },
+ {
+  "slug": "send-and-split-money-by-chatting-with-your-ai-agent",
+  "title_zh": "Send and split money by chatting with your AI agent",
+  "summary_zh": "An MCP in front of a wallet lets an agent send and request money, split dinners, trips and poker ledgers, with passkey approval or preset trusted contacts.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/send-and-split-money-by-chatting-with-your-ai-agent",
+  "translated": false,
+  "prompt_en": "Connect to my [wallet or payments MCP] and help me split [a dinner / a trip / a poker night] with [names of people]. Work out who owes what from these details: [amounts, who paid, any exceptions]. Show me the full list of requests or payments, with names and amounts, and wait for my approval before sending or requesting any money. You're done when I've confirmed and each person has a request or payment queued.",
+  "source": "HN",
+  "date": "Nov 24, 2026"
+ },
+ {
+  "slug": "route-refused-tasks-between-local-and-frontier-models",
+  "title_zh": "Route refused tasks between local and frontier models",
+  "summary_zh": "A commenter runs a local Qwen model with an agents.md policy that escalates refused tasks via a shared SQL task board to a model willing to do them, such as clicking login buttons.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/route-refused-tasks-between-local-and-frontier-models",
+  "translated": false,
+  "prompt_en": "Help me set up a routing policy between my local model [model name, e.g. Qwen] and a stronger hosted model. Write an agents.md that tells the local model to log any task it refuses or can't do into a shared SQL task board table at [database path], with fields for task, status and result. Then write a small worker that picks up those pending tasks and sends them to [hosted model]. Run one test task and show me the board before and after. Ask me before running anything that touches my accounts.",
+  "source": "HN",
+  "date": "Nov 24, 2026"
+ },
+ {
+  "slug": "have-an-ai-agent-shop-for-a-gift-on-a-25-budget",
+  "title_zh": "Have an AI agent shop for a gift on a $25 budget",
+  "summary_zh": "The author gave an agent a virtual debit card to buy a gift; it browsed, compared products and reached checkout but struggled with CAPTCHAs, dynamic pricing and bot-blocking stores.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/have-an-ai-agent-shop-for-a-gift-on-a-25-budget",
+  "translated": false,
+  "prompt_en": "Find a gift for [recipient, with their interests] under $[25] total including shipping and tax. Browse a few stores, compare at least [3] options on price, reviews and delivery time, and recommend one with reasons. Take it to the checkout page but stop before entering payment details or placing the order, and show me the item, final price and shipping address for approval. If a store blocks you or shows a CAPTCHA, skip it and tell me which one.",
+  "source": "wiz.jock.pl"
+ },
+ {
+  "slug": "let-google-ai-mode-find-and-check-out-a-gift",
+  "title_zh": "Let Google AI Mode find and check out a gift",
+  "summary_zh": "A reporter set a target price and permission to buy for a haircare gift set; Google opened a prefilled checkout and also called nearby stores to check stock.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/let-google-ai-mode-find-and-check-out-a-gift",
+  "translated": false,
+  "prompt_en": "Find [a specific gift, e.g. a haircare gift set for a friend with curly hair] and buy it only if the total comes to $[target price] or less. Check a few retailers, including whether [nearby stores or my city] have it in stock, and call stores if needed. Open the prefilled checkout and stop there, showing me the item, price, shipping and payment method before I approve the purchase.",
+  "source": "tech.yahoo.com"
  }
 ]

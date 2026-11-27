@@ -29001,5 +29001,285 @@
   "translated": false,
   "prompt_en": "Help me set up this folder as a research workspace for my [field, e.g. political science] work. Create a CLAUDE.md that records my conventions: [analysis tools, e.g. R or Python], citation style [style], writing voice [description], and folder layout for data, code, and drafts. Add a few reusable commands for jobs like [e.g. cleaning survey data, running a regression table, editing a paper section]. Finish by walking me through the setup and a test run on [a sample file], and ask before overwriting or deleting any existing file.",
   "date": "Nov 25, 2026"
+ },
+ {
+  "slug": "build-a-multi-agent-system-on-aws",
+  "title_zh": "Build a multi-agent system on AWS",
+  "summary_zh": "The author built a multi-agent system on AWS as the final project of Udacity's AWS Agent Engineer Nanodegree.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-a-multi-agent-system-on-aws",
+  "translated": false,
+  "prompt_en": "Help me build a small multi-agent system on AWS for [describe the task, e.g. triaging customer support emails]. Start by proposing an architecture with one coordinator agent and [number] specialist agents, and tell me which AWS services each would use. Then scaffold the code in this folder, add a README with deploy steps, and stop once I can run one end-to-end test locally. Pause and show me the plan before you create or change anything in my AWS account.",
+  "source": "DEV",
+  "date": "Nov 25, 2026"
+ },
+ {
+  "slug": "gate-refund-actions-with-a-tool-gate-model",
+  "title_zh": "Gate refund actions with a tool-gate model",
+  "summary_zh": "The author tested Strands Decider 2B as a tool gate that decides whether an agent should act on 16 refund cases, compared against Nova Pro as a judge.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/gate-refund-actions-with-a-tool-gate-model",
+  "translated": false,
+  "prompt_en": "I want to test whether a small model can act as a gate that decides if an agent should take an action like [e.g. issuing a refund]. Write a script that runs [number] test cases from [file or description of cases] through the gate model and through a larger judge model, then compares their decisions. A finished job is a table showing each case, both decisions, where they disagree, and the overall agreement rate. Do not call any real refund or payment systems; use mock tools only.",
+  "source": "DEV",
+  "date": "Nov 25, 2026"
+ },
+ {
+  "slug": "source-motivated-seller-real-estate-deals-from-redfin-listin",
+  "title_zh": "Source motivated-seller real estate deals from Redfin listings",
+  "summary_zh": "Claude pulls up to 150 active Redfin listings via a scraper, computes median price per square foot, and flags below-median listings with long days on market for investors. Tutorial, not a confirmed first-person account.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/source-motivated-seller-real-estate-deals-from-redfin-listin",
+  "translated": false,
+  "prompt_en": "Here is a list of up to [150] active real estate listings in [city or zip code] with price, square footage, and days on market: [paste data or attach file]. Calculate the median price per square foot, then flag listings priced below that median that have been on the market more than [60] days. Give me a ranked table of the flagged listings with the reasons they look like motivated sellers, and note any listings with missing data you had to skip.",
+  "source": "themineworks.com"
+ },
+ {
+  "slug": "analyze-a-rental-property-deal-with-comps-and-rehab-costs",
+  "title_zh": "Analyze a rental property deal with comps and rehab costs",
+  "summary_zh": "Claude Code, connected to an MCP server, pulls property value, comps and rent estimates and runs a deal analysis on a $312,000 Florida listing with $45,000 rehab. Vendor example, not a real user report.",
+  "prompt_zh": "",
+  "category_zh": "金钱账单与权益",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/analyze-a-rental-property-deal-with-comps-and-rehab-costs",
+  "translated": false,
+  "prompt_en": "Analyze this rental property deal: [address], listed at $[price] with an estimated $[rehab cost] rehab. Pull the estimated value, comparable sales, and rent estimates from [data source or connected tool], then calculate total investment, projected monthly cash flow, cap rate, and cash-on-cash return using [down payment and interest rate] financing. Finish with a one-page summary and a clear buy, negotiate, or pass recommendation, listing any assumptions you made.",
+  "source": "resideline.com"
+ },
+ {
+  "slug": "run-data-research-projects-with-a-coding-agent",
+  "title_zh": "Run data research projects with a coding agent",
+  "summary_zh": "An author used Claude Code on data projects including Canadian daycare research, grading it B- for imperfect reliability and weak research documentation.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-data-research-projects-with-a-coding-agent",
+  "translated": false,
+  "prompt_en": "I want to research [topic, e.g. childcare costs in my province] using public data. Find the relevant datasets, download them, clean them, and write analysis scripts that answer [my research question]. Keep a README that records every source, every cleaning step, and any assumption or number you could not verify, so I can check your work. Stop when I have one chart or table answering the question plus that README.",
+  "source": "simplicityissota.substack.com"
+ },
+ {
+  "slug": "build-morning-routine-and-vacuum-automations",
+  "title_zh": "Build morning routine and vacuum automations",
+  "summary_zh": "A commenter had Claude help build a button-triggered morning routine for their daughter and a robot vacuum dispatch when the litter box cycles.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-morning-routine-and-vacuum-automations",
+  "translated": false,
+  "prompt_en": "Help me create two Home Assistant automations. First, a morning routine for my [child] triggered by pressing [button or device] that does [lights, music, announcements, etc.]. Second, send my robot vacuum [model] to clean when [trigger, e.g. the litter box finishes a cycle]. Give me the YAML with my entity names as placeholders, explain how to find the right entities, and stop when I have both automations ready to paste in and test.",
+  "source": "Reddit",
+  "date": "Oct 24, 2026"
+ },
+ {
+  "slug": "pull-nutrition-and-fitness-data-into-one-dashboard",
+  "title_zh": "Pull nutrition and fitness data into one dashboard",
+  "summary_zh": "A poster set up a tracker via Claude in Chrome that gathers Cronometer and Fitbit or Google Health data in one place.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Claude in Chrome"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/pull-nutrition-and-fitness-data-into-one-dashboard",
+  "translated": false,
+  "prompt_en": "Using my logged-in browser, open [Cronometer] and [Fitbit or Google Health] and pull my [calories, macros, steps, sleep, weight] for the last [number] days. Put them in one table or simple dashboard in [Google Sheet or local HTML file], one row per day. Don't change any settings or data on those sites, and stop when the combined view is ready and you have told me any days with missing data.",
+  "source": "Reddit",
+  "date": "Jun 23, 2026"
+ },
+ {
+  "slug": "find-enrich-and-push-sales-prospects-into-hubspot",
+  "title_zh": "Find, enrich and push sales prospects into HubSpot",
+  "summary_zh": "A commenter uses Claude connected to Clay and HubSpot to find organizations and contacts, enrich records, and push them into HubSpot.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/find-enrich-and-push-sales-prospects-into-hubspot",
+  "translated": false,
+  "prompt_en": "Find [number] organizations matching this profile: [industry, size, region, other criteria], and the best contacts at each with the title [target job titles]. Enrich each record with [fields such as email, website, headcount, LinkedIn] using Clay. Before adding anything to HubSpot, show me the full list in a table and wait for my approval. You are done when the approved records are in HubSpot with no duplicates of existing contacts.",
+  "source": "Reddit",
+  "date": "Nov 21, 2026"
+ },
+ {
+  "slug": "automate-pr-reviews-and-changelogs-with-github-actions",
+  "title_zh": "Automate PR reviews and changelogs with GitHub Actions",
+  "summary_zh": "Author runs Claude Code autonomously in GitHub Actions in production to review PRs, analyze test failures, generate changelogs and turn issue specs into implementation stubs.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/automate-pr-reviews-and-changelogs-with-github-actions",
+  "translated": false,
+  "prompt_en": "Set up a GitHub Actions workflow in my repo [repo name] that runs Claude Code on every new pull request to review the diff and post a summary comment with any bugs or risks it finds. Also add a step that drafts a changelog entry from merged PRs under [changelog file path]. Show me the workflow file and wait for my approval before committing it or adding any secrets.",
+  "source": "dev.to",
+  "date": "Oct 17, 2026"
+ },
+ {
+  "slug": "add-unit-tests-to-a-forgotten-node-js-backend",
+  "title_zh": "Add unit tests to a forgotten Node.js backend",
+  "summary_zh": "Claude Code read AGENTS.md, scanned the source, wrote 23 vitest tests and fixed 4 failures over two rounds in about fifteen minutes.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/add-unit-tests-to-a-forgotten-node-js-backend",
+  "translated": false,
+  "prompt_en": "Read the project docs and source in [project folder], then add unit tests with [test framework, e.g. vitest] covering the main modules and routes. Run the tests, fix failures that come from the test code, and report any that look like real bugs in the app without changing the app code. Finish with a summary of what's covered and the pass count.",
+  "source": "cnblogs.com",
+  "date": "Nov 25, 2026"
+ },
+ {
+  "slug": "let-an-agent-run-a-business-autonomously-from-zero",
+  "title_zh": "Let an agent run a business autonomously from zero",
+  "summary_zh": "Author set up Claude Code with memory and a decision log to pick moves each session; over 31 sessions across five markets it earned $0.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/let-an-agent-run-a-business-autonomously-from-zero",
+  "translated": false,
+  "prompt_en": "Act as an autonomous operator trying to make my first $[target] in [market or niche]. Keep a memory file and a decision log, and at the start of each session review them and choose one next move with your reasoning. Pause and show me before spending money, creating accounts, or publishing anything, and end each session by logging results and a recommended next step.",
+  "source": "dev.to"
+ },
+ {
+  "slug": "build-and-run-an-affiliate-marketing-site-with-sub-agents",
+  "title_zh": "Build and run an affiliate marketing site with sub-agents",
+  "summary_zh": "Author used an agent with specialised sub-agents to build and operate a 729-page affiliate site, reporting $1,422 revenue in 30 days, reviewing public work and approving releases.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-and-run-an-affiliate-marketing-site-with-sub-agents",
+  "translated": false,
+  "prompt_en": "Build and run an affiliate site about [niche] using specialised sub-agents for research, writing, SEO and publishing. Draft the pages and a publishing plan, and show me each batch for approval before anything goes live or any affiliate account is signed up for. Each week, report pages published, traffic and revenue so I can review it.",
+  "source": "solopreneurcode.substack.com",
+  "date": "Nov 26, 2026"
+ },
+ {
+  "slug": "have-an-autonomous-agent-try-to-earn-its-first-dollar",
+  "title_zh": "Have an autonomous agent try to earn its first dollar",
+  "summary_zh": "An autonomous agent built products and a research reproduction but kept getting accounts banned, earning $0 after twelve days.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/have-an-autonomous-agent-try-to-earn-its-first-dollar",
+  "translated": false,
+  "prompt_en": "Try to earn a first dollar online in [area, e.g. digital products or freelance research] with a budget of $[amount]. Propose three concrete plans with the risks of each, including platform rules that could get an account banned, and wait for me to pick one. Pause before creating any account, spending money, or posting anything publicly.",
+  "source": "dev.to"
+ },
+ {
+  "slug": "run-content-marketing-and-tiktok-posting-with-claude",
+  "title_zh": "Run content marketing and TikTok posting with Claude",
+  "summary_zh": "A commenter has Claude find social conversations, research SEO topics, write articles, generate short videos, and post TikToks every six hours hands-free.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-content-marketing-and-tiktok-posting-with-claude",
+  "translated": false,
+  "prompt_en": "I run marketing for [my business/product], which helps [target audience] with [problem]. Find 10 recent social conversations where people are asking about [topic], research 5 SEO topics that match, and draft one article for the best topic plus a 30-second TikTok script for it. Finish with a content plan table listing each piece, its channel, and a proposed posting time every [6] hours, and pause for my approval before anything is posted or published.",
+  "source": "Reddit",
+  "date": "Aug 27, 2026"
+ },
+ {
+  "slug": "prepare-bulk-social-posts-for-buffer-or-metricool",
+  "title_zh": "Prepare bulk social posts for Buffer or Metricool",
+  "summary_zh": "A commenter has Claude write captions and a CSV for bulk scheduling in Buffer or Metricool, since it can't post to Instagram or TikTok directly.",
+  "prompt_zh": "",
+  "category_zh": "增长与营销",
+  "agents": [
+   "Claude"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/prepare-bulk-social-posts-for-buffer-or-metricool",
+  "translated": false,
+  "prompt_en": "I'm promoting [brand or product] to [audience] on [Instagram/TikTok/both]. Write [20] social captions with hashtags in a [tone] voice, built around [themes or products], and put them in a CSV with columns for date, time, platform, caption, and media filename, spaced out over [number] weeks. It's finished when the CSV matches the bulk upload format for [Buffer/Metricool] and I've reviewed the captions before importing.",
+  "source": "Reddit",
+  "date": "Nov 21, 2026"
+ },
+ {
+  "slug": "qa-your-app-and-check-failed-deployments-from-your-phone",
+  "title_zh": "QA your app and check failed deployments from your phone",
+  "summary_zh": "A developer used Grok Bot to test their own app remotely and check failed deployments, and earlier to chase a A$17.49 refund via a website's live chat.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/qa-your-app-and-check-failed-deployments-from-your-phone",
+  "translated": false,
+  "prompt_en": "Please QA my app at [app URL] by logging in with the test account [test login] and walking through these flows: [sign up, checkout, key features]. Also check [hosting or CI service, e.g. Vercel or GitHub Actions] for failed deployments in [project name] and read the logs. When you finish, send me a short report listing each bug you found with steps to reproduce it, plus the likely cause of any failed deployment. Do not redeploy, change settings, or submit any real payment without showing me first and getting my approval.",
+  "source": "blog.logrocket.com"
+ },
+ {
+  "slug": "handle-linkedin-backlog-and-life-admin-tasks-with-a-bot",
+  "title_zh": "Handle LinkedIn backlog and life admin tasks with a bot",
+  "summary_zh": "Mollie Mueller used Grok Bot to sort LinkedIn messages after maternity leave, restore her banner, email a vendor for a quote, renew parking permits and find toddler classes.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/handle-linkedin-backlog-and-life-admin-tasks-with-a-bot",
+  "translated": false,
+  "prompt_en": "Help me clear my life admin backlog. Start with my LinkedIn messages: sort them into reply now, reply later and ignore, and draft replies for the first group. Then do these tasks: [email [vendor] to request a quote for [job], renew [parking permit or similar], find [kind of classes] near [my area] for a [age] child]. Finish with a summary of what is done and what still needs me. Before sending any email, submitting a form or making a payment, pause and show me exactly what you are about to do.",
+  "source": "molliemueller.com"
+ },
+ {
+  "slug": "run-personal-assistant-content-and-brand-deal-bots",
+  "title_zh": "Run personal assistant, content and brand-deal bots",
+  "summary_zh": "The author built three Grok Bot agents: one as personal assistant, one repurposing newsletters and replying to YouTube comments, and one handling brand deals including an NDA.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Grok Bot"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-personal-assistant-content-and-brand-deal-bots",
+  "translated": false,
+  "prompt_en": "Act as my assistant for [my work, e.g. newsletter and YouTube channel]. Each [day or week], take my latest [newsletter issue] and turn it into [format, e.g. 3 social posts and a short video script], and draft replies to new comments on [channel or platform] in my voice, which is [tone description]. Done means a single list of drafts for me to review, nothing posted. Before posting, replying, sending any message or signing anything, show me the exact text and wait for my approval.",
+  "source": "aiwithremy.com"
  }
 ]

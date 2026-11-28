@@ -29281,5 +29281,299 @@
   "translated": false,
   "prompt_en": "Act as my assistant for [my work, e.g. newsletter and YouTube channel]. Each [day or week], take my latest [newsletter issue] and turn it into [format, e.g. 3 social posts and a short video script], and draft replies to new comments on [channel or platform] in my voice, which is [tone description]. Done means a single list of drafts for me to review, nothing posted. Before posting, replying, sending any message or signing anything, show me the exact text and wait for my approval.",
   "source": "aiwithremy.com"
+ },
+ {
+  "slug": "order-groceries-from-walmart-via-a-shopping-agent",
+  "title_zh": "Order groceries from Walmart via a shopping agent",
+  "summary_zh": "The author tried an agent to browse, add to cart and check out at Walmart; it took over 16 minutes and ultimately failed.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/order-groceries-from-walmart-via-a-shopping-agent",
+  "translated": false,
+  "prompt_en": "Go to [Walmart.com or my grocery store's site] while I'm logged in and add these items to my cart: [list of items with quantities and any brand or size preferences]. If an item is unavailable, suggest a close substitute instead of picking one yourself. Stop when the cart is complete and show me the items, prices, and total. Pause before checkout or payment and wait for my approval.",
+  "source": "Bluesky",
+  "date": "Nov 27, 2026"
+ },
+ {
+  "slug": "get-a-daily-digest-of-top-ai-agent-posts-from-social-feeds",
+  "title_zh": "Get a daily digest of top AI-agent posts from social feeds",
+  "summary_zh": "The author asked Muse to send the 5 best AI-agent posts from their Threads and Instagram feeds each morning at 8; it created a scheduled task and sent a first, general report.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/get-a-daily-digest-of-top-ai-agent-posts-from-social-feeds",
+  "translated": false,
+  "prompt_en": "Every morning at [8am, my time zone], look through my [Threads and Instagram] feeds and pick the [5] best posts about [topic, e.g. AI agents]. Send me a short digest with a one-line summary of each post and a link, favoring posts with new ideas over general news. Set this up as a recurring scheduled task, run it once now so I can see the format, and ask me before changing anything on my accounts.",
+  "source": "buildtolaunch.substack.com"
+ },
+ {
+  "slug": "run-content-scheduling-reminders-and-research-with-muse",
+  "title_zh": "Run content, scheduling, reminders and research with Muse",
+  "summary_zh": "A team used Muse for several days on content management, scheduling, reminders, research and testing private MCP tools, noting odd interfaces, popups, logins and CAPTCHAs can still confuse it.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-content-scheduling-reminders-and-research-with-muse",
+  "translated": false,
+  "prompt_en": "Act as my assistant for the next [few days]. Help me with [content planning, scheduling, reminders, and quick research on topics I give you]. For each task, tell me what you did and flag anything that got stuck on a login, popup, or CAPTCHA instead of guessing. Before sending any message, publishing anything, or changing my calendar, show me exactly what you're about to do and wait for my approval.",
+  "source": "codemypixel.com"
+ },
+ {
+  "slug": "self-host-open-source-apps-by-having-an-agent-do-the-setup",
+  "title_zh": "Self-host open-source apps by having an agent do the setup",
+  "summary_zh": "The author has an agent SSH into a local server and install self-hosted apps (e.g. baby tracking, finance tracking), then set up a Cloudflare tunnel.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/self-host-open-source-apps-by-having-an-agent-do-the-setup",
+  "translated": false,
+  "prompt_en": "SSH into my home server at [server address and username] and install [self-hosted app, e.g. a baby tracker or personal finance tracker] using Docker, keeping its data in a persistent folder. Then set up a Cloudflare tunnel so I can reach it at [my domain or subdomain], and confirm the app loads through that address. Before you open anything to the internet, change firewall rules, or delete any files, pause and show me exactly what you plan to do.",
+  "source": "HN",
+  "date": "Nov 27, 2026"
+ },
+ {
+  "slug": "book-an-appointment-using-chatgpt-agent-mode",
+  "title_zh": "Book an appointment using ChatGPT Agent mode",
+  "summary_zh": "The agent checked Google Calendar for free time and sent an appointment email, but was about 10x slower than manual, the session expired, and the chosen time conflicted.",
+  "prompt_zh": "",
+  "category_zh": "出行与旅行",
+  "agents": [
+   "ChatGPT Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/book-an-appointment-using-chatgpt-agent-mode",
+  "translated": false,
+  "prompt_en": "Check my Google Calendar for free time over the next [number] days, then find the booking page or email address for [provider, e.g. my dentist] and propose an appointment that fits [duration] and avoids my existing events. Double-check the chosen slot against my calendar for conflicts. Do not submit the booking form or send any email until you show me the exact time and message and I approve it.",
+  "source": "note.com"
+ },
+ {
+  "slug": "automate-repetitive-web-research-into-tables",
+  "title_zh": "Automate repetitive web research into tables",
+  "summary_zh": "The poster uses Claude Code with Browser Use and Chrome so a browser agent navigates, extracts and structures web data, returning results in a table.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Claude Code"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/automate-repetitive-web-research-into-tables",
+  "translated": false,
+  "prompt_en": "Use a browser tool to visit [list of websites or search pages] and collect [data fields, e.g. product name, price, rating, link] for [topic or query]. Put the results in a table, save it as a CSV at [file path], and note any pages you could not read or values you were unsure about. Stop once you have covered [number] items or all listed sources, and show me the table.",
+  "source": "Reddit",
+  "date": "Aug 1, 2026"
+ },
+ {
+  "slug": "build-a-competitor-intelligence-tool-for-evidence-search",
+  "title_zh": "Build a competitor intelligence tool for evidence search",
+  "summary_zh": "The author tested an agent on competitor research and built a tool to automate evidence search and assessment, noting mistakes in source weighting, deduplication and unsupported certainty.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/build-a-competitor-intelligence-tool-for-evidence-search",
+  "translated": false,
+  "prompt_en": "Build me a small tool that researches [competitor name or list] on [question, e.g. pricing, features, recent launches] by searching [sources or search terms] and collecting evidence with source links. It should remove duplicate sources, weight sources by reliability (primary sources over blog posts and rumors), and label each claim as confirmed, likely, or unsupported rather than stating everything with certainty. Finish by running it on [one competitor] and showing me the report so I can check it.",
+  "source": "Reddit",
+  "date": "Sep 1, 2026"
+ },
+ {
+  "slug": "answer-canadian-statistics-questions-from-official-data-sour",
+  "title_zh": "Answer Canadian statistics questions from official data sources",
+  "summary_zh": "MapleStats connects an AI to 186 official Canadian data sources so it can return accurate figures like unemployment rates and rents; the author reports 8% to 92% accuracy on a 53-question benchmark.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/answer-canadian-statistics-questions-from-official-data-sour",
+  "translated": false,
+  "prompt_en": "I need accurate statistics about [topic, e.g. unemployment rate or average rent] for [Canadian region or city] and [time period]. Look only at official sources such as Statistics Canada or CMHC, and give me each figure with the table name, release date, and a link. If you cannot find an official number, say so instead of estimating, and stop once you have answered all of these questions: [list your questions].",
+  "date": "Nov 26, 2026"
+ },
+ {
+  "slug": "scale-ml-innovations-across-ads-ranking-models-with-ai-agent",
+  "title_zh": "Scale ML innovations across ads ranking models with AI agents",
+  "summary_zh": "Meta engineering describes using AI agents to help scale ML innovations across its ads ranking models; the post gives only the headline.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Custom agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/scale-ml-innovations-across-ads-ranking-models-with-ai-agent",
+  "translated": false,
+  "prompt_en": "In my repository at [path or repo name], I have a model improvement that worked on [model A, e.g. a ranking model]: [short description of the change]. Find other models in the codebase with a similar structure, such as [model B, model C], and propose how to apply the same change to each one. Make the changes on a new branch, run the existing tests, and stop with a summary of which models changed and which results need my review. Pause and show me the plan before editing any files or pushing anything.",
+  "date": "Nov 22, 2026"
+ },
+ {
+  "slug": "scan-job-listings-and-compile-contact-lists-with-operator",
+  "title_zh": "Scan job listings and compile contact lists with Operator",
+  "summary_zh": "Early Operator users had it scan job listings against a resume, compile details on 50 financial YouTubers with LinkedIn and emails, and test local dev environments; some sites blocked it.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Operator"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/scan-job-listings-and-compile-contact-lists-with-operator",
+  "translated": false,
+  "prompt_en": "Search [job sites] for [job title] roles in [location] and compare each listing against my resume at [resume location or pasted text]. Build a table of the 15 best matches with company, role, link, and why it fits. Stop when the table is done. Do not submit any applications or forms, and tell me if a site blocks you.",
+  "source": "the-decoder.com"
+ },
+ {
+  "slug": "set-up-news-alerts-with-a-browser-agent",
+  "title_zh": "Set up news alerts with a browser agent",
+  "summary_zh": "Testers had Operator set up news alerts and save a summary; it followed a logical path but was slow and Google blocked login, so they leaned toward cancelling.",
+  "prompt_zh": "",
+  "category_zh": "研究与分析",
+  "agents": [
+   "Operator"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/set-up-news-alerts-with-a-browser-agent",
+  "translated": false,
+  "prompt_en": "Set up news alerts for [topic or company] using [alert service, e.g. Google Alerts] with [frequency]. Then save a short summary of the alerts you created and their settings in [place to save]. Before submitting any sign-in or subscription form, pause and show me what you are about to do. If a login is blocked, stop and tell me.",
+  "source": "consumeraidecoded.substack.com"
+ },
+ {
+  "slug": "work-across-gmail-and-google-drive-in-a-shared-chat",
+  "title_zh": "Work across Gmail and Google Drive in a shared chat",
+  "summary_zh": "A user connected Muse to Google Drive and Gmail in a shared chat so it works across those services in ongoing conversations.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/work-across-gmail-and-google-drive-in-a-shared-chat",
+  "translated": false,
+  "prompt_en": "I have connected my Gmail and Google Drive. Find [the documents or emails I need, e.g. last quarter's invoices from vendor X] and put the key details into a short summary with links to each source. Stop when the summary is complete. Do not send, share, move, or delete anything without showing me first.",
+  "source": "Reddit",
+  "date": "Oct 10, 2026"
+ },
+ {
+  "slug": "buy-groceries-through-a-walmart-account",
+  "title_zh": "Buy groceries through a Walmart+ account",
+  "summary_zh": "A user gave Muse access to their Walmart+ account to buy groceries and tested it against manual shopping.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/buy-groceries-through-a-walmart-account",
+  "translated": false,
+  "prompt_en": "Using my Walmart+ account, build a grocery cart from this list: [items and quantities], with a budget of [amount] and delivery or pickup on [date]. Substitute only with [my rules on substitutions]. Stop at checkout and show me the full cart and total, and do not place the order until I approve.",
+  "source": "Reddit",
+  "date": "Oct 22, 2026"
+ },
+ {
+  "slug": "update-a-website-automatically",
+  "title_zh": "Update a website automatically",
+  "summary_zh": "A user says Muse automatically updates their site on their behalf.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/update-a-website-automatically",
+  "translated": false,
+  "prompt_en": "Update my website at [site address] with these changes: [list of updates, e.g. new hours, a new blog post]. Show me exactly what will change before you publish anything. After I approve, make the changes and send me a link to check each updated page.",
+  "source": "Reddit",
+  "date": "Sep 27, 2026"
+ },
+ {
+  "slug": "clean-up-a-facebook-timeline-ended-in-suspension",
+  "title_zh": "Clean up a Facebook timeline (ended in suspension)",
+  "summary_zh": "A user had Muse clean up their Facebook timeline and believes this contributed to an account suspension.",
+  "prompt_zh": "",
+  "category_zh": "生活与家庭",
+  "agents": [
+   "Meta Muse"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/clean-up-a-facebook-timeline-ended-in-suspension",
+  "translated": false,
+  "prompt_en": "Review my Facebook timeline and list old posts that match [criteria, e.g. before 2018, contain tagged photos of others] as candidates for removal. Do not delete or change anything. Show me the list and wait for my approval, and work in small batches at a normal human pace so I don't trigger account limits.",
+  "source": "Reddit",
+  "date": "Oct 31, 2026"
+ },
+ {
+  "slug": "process-github-issues-into-pull-requests-overnight",
+  "title_zh": "Process GitHub issues into pull requests overnight",
+  "summary_zh": "A cron job triggers an OpenClaw agent to pick one unstarted GitHub issue, implement and test the change, open a PR, and relabel the issue ai-completed.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "OpenClaw"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/process-github-issues-into-pull-requests-overnight",
+  "translated": false,
+  "prompt_en": "Every night at [time, e.g. 1:00 AM], look at the open issues in my GitHub repo [owner/repo] and pick one that has no label and no one working on it. Implement the change on a new branch, run the tests, and open a pull request that links the issue. When the PR is open, relabel the issue [ai-completed] and stop, and do not merge anything or touch more than one issue per run.",
+  "source": "medium.com"
+ },
+ {
+  "slug": "run-coding-agents-and-experiments-overnight-while-asleep",
+  "title_zh": "Run coding agents and experiments overnight while asleep",
+  "summary_zh": "OpenClaw drove coding agents from 12:30AM to 7AM, and another user's overnight cron spawns experiment subagents whose results he reviews each morning as decision records.",
+  "prompt_zh": "",
+  "category_zh": "软件与运维",
+  "agents": [
+   "OpenClaw"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-coding-agents-and-experiments-overnight-while-asleep",
+  "translated": false,
+  "prompt_en": "Set up a nightly job at [time, e.g. 12:30 AM] that works on [project or repo] while I sleep. It should start coding agents on the top items from [my task list or backlog], and for any open question it should run a small experiment and write a short decision record covering what was tried, the result, and a recommendation. Have it all ready as a morning summary by [7 AM], and do not merge, deploy, or delete anything without my approval.",
+  "source": "openclawlab.xyz"
+ },
+ {
+  "slug": "run-slow-background-reports-and-research-on-a-mac-mini",
+  "title_zh": "Run slow background reports and research on a Mac mini",
+  "summary_zh": "OpenClaw on a Mac mini handles sales reports, inventory checks, and roughly 30-minute research tasks in the background, alongside Cowork.",
+  "prompt_zh": "",
+  "category_zh": "运营与效率",
+  "agents": [
+   "OpenClaw",
+   "Claude Cowork"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/run-slow-background-reports-and-research-on-a-mac-mini",
+  "translated": false,
+  "prompt_en": "Handle these slow background jobs for me: [weekly sales report from source], [inventory check against threshold or supplier list], and research on [topic] that may take about 30 minutes. For each one, save the finished result as a short document in [folder] and message me when it is ready with the three most important findings. Do not send anything to other people or change any data in my systems without showing me first.",
+  "source": "astropad.com"
+ },
+ {
+  "slug": "list-a-broken-ipad-for-sale-with-optimal-pricing",
+  "title_zh": "List a broken iPad for sale with optimal pricing",
+  "summary_zh": "A user had ChatGPT Agent create a listing for a cracked-screen iPad from two photos and shipping details, researching similar listings for price and starting bid; it sold for $60.",
+  "prompt_zh": "",
+  "category_zh": "购物与比价",
+  "agents": [
+   "ChatGPT Agent"
+  ],
+  "accounts": null,
+  "url": "https://agentusecases.ai/use-case/list-a-broken-ipad-for-sale-with-optimal-pricing",
+  "translated": false,
+  "prompt_en": "I want to sell my [item, e.g. iPad with a cracked screen] and I am attaching [number] photos plus these details: [condition, accessories, shipping location and method]. Research similar sold and active listings on [marketplace, e.g. eBay], then draft a complete listing with a title, honest description, suggested starting price or bid, and shipping settings. Show me the finished draft and pause before you publish anything.",
+  "source": "Reddit"
  }
 ]
